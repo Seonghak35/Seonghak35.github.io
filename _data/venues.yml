@@ -1,6 +1,39 @@
-"AJP":
-  url: https://aapt.scitation.org/journal/ajp
-  color: "#00369f"
+"IJASS":
+  url: https://link.springer.com/journal/42405
+  color: "green"
 
-"PhysRev":
-  url: https://journals.aps.org/
+"Ocean Eng.":
+        url: https://www.sciencedirect.com/journal/ocean-engineering
+        color: "blue"
+
+"arXiv":
+        url: https://arxiv.org/
+        color: "black"
+
+"S&V":
+        color: "gray"
+
+"ACFD":
+        color: "#FF1493"
+
+"AIAA":
+        color: "#6495ED"
+        url: https://www.aiaa.org/events-learning/event/2024/01/08/default-calendar/2024-aiaa-science-and-technology-forum-and-exposition-(aiaa-scitech-forum)
+
+"WACV":
+        color: "#2F4F4F"
+        url: https://wacv2024.thecvf.com/
+
+"Under Review":
+        color: "#FFD700"
+
+"NCFE":
+        color: "#B22222"
+
+"KSASS":
+        color: "#ADD8E6"
+
+
+
+
+
