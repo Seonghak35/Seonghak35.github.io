@@ -2,96 +2,117 @@
   type: map
   contents:
     - name: Full Name
-      value: Albert Einstein
+      value: SeongHak KIM
     - name: Date of Birth
-      value: 14th March 1879
-    - name: Languages
-      value: English, German
+      value: 5th March 1996
+    - name: Birthplace
+      value: Daegu, Republic of Korea (ROK)
+    - name: Nationality
+      value: Korean
+    - name: Military Service
+      value: May. 2016 - Feb. 2018 (Marine Corps)
 
-- title: Education
+      #- title: Education
+      #  type: time_table
+      #  contents:
+      #    - title: PhD
+      #      institution: University of Zurich, Zurich, Switzerland
+      #      year: 1905
+      #      description:
+      #        - Description 1.
+      #        - Description 2.
+      #        - title: Description 3.
+      #          contents:
+      #            - Sub-description 1.
+      #            - Sub-description 2.
+      #    - title: Federal teaching diploma
+      #      institution: Eidgenössische Technische Hochschule, Zurich, Switzerland
+      #      year: 1900
+      #      description:
+      #        - Description 1.
+      #        - Description 2.
+
+- title: Research Experiences
   type: time_table
   contents:
-    - title: PhD
-      institution: University of Zurich, Zurich, Switzerland
-      year: 1905
+    - title: Student Researcher
+      institution: Korea Advanced Institute of Science and Technology (KAIST), Daejeon, ROK
+      department: Electrical Engineering
+      year: 2022.09 - 2024.02
       description:
-        - Description 1.
-        - Description 2.
-        - title: Description 3.
+        - Advised by <em> Prof. Daeshik Kim </em>
+        - title: Interests
           contents:
-            - Sub-description 1.
-            - Sub-description 2.
-    - title: Federal teaching diploma
-      institution: Eidgenössische Technische Hochschule, Zurich, Switzerland
-      year: 1900
+            - Computer Vision, Model Compression, and Knowledge Distillation (KD)
+            - Neural Operator and Physics-Informed Neural Networks (PINNs)
+    - title: Student Researcher
+      institution: Seoul National University (SNU), Seoul, ROK
+      department: Aerospace Engineering
+      year: 2020.09 - 2022.08
       description:
-        - Description 1.
-        - Description 2.
-
-- title: Experience
-  type: time_table
-  contents:
-    - title: Professor of Theoretical Physics
-      institution: Institute for Advanced Study, Princeton University
-      year: 1933 - 1955
-      description:
-        - Description 1.
-        - Description 2.
-        - title: Description 3.
+        - Advised by <em> Prof. Chongam Kim </em>
+        - title: Interests
           contents:
-            - Sub-description 1.
-            - Sub-description 2.
-    - title: Visiting Professor
-      institution: California Institute of Technology, Pasadena, California, US
-      year: 1933
-      description:
-        - Description 1.
-        - Description 2.
+            - Computational Fluid Dynamics (CFD), Multiphase Flow, and <br> Bubble Dynamics
 
-    - title: Director
-      institution: Kaiser Wilhelm Institute for Physics, Berlin, Germany.
-      year: 1917-1933
-
-    - title: Professor of Theoretical Physics
-      institution: Karl-Ferdinand University, Prague, Czechoslovakia
-      year: 1911 - 1917
-      description:
-
-    - title: Associate Professor of Theoretical Physics
-      institution: University of Zurich, Zurich, Switzerland
-      year: 1909 - 1911
-
-- title: Open Source Projects
-  type: time_table
-  contents:
-    - title: <a href="https://github.com/alshedivat/al-folio">al-folio</a>
-      year: 2015-now
-      description: A beautiful, simple, clean, and responsive Jekyll theme for academics.
+              #- title: Open Source Projects
+              #  type: time_table
+              #  contents:
+              #    - title: <a href="https://github.com/alshedivat/al-folio">al-folio</a>
+              #      year: 2015-now
+              #      description: A beautiful, simple, clean, and responsive Jekyll theme for academics.
 
 - title: Honors and Awards
   type: time_table
   contents:
-    - year: 1921
-      items: 
-        - Nobel Prize in Physics 
-        - Matteucci Medal
-    - year: 2029
-      items: 
-        - Max Planck Medal
+    - title: <i class="fa-solid fa-award icondepartment"></i> Best Paper Award
+      institution: National Congress on Fluids Engineering (NCFE), ROK
+      paper: <font size=2>Numerical analysis of a phase change effect on the multiple pulsations of the spark-generated bubble</font>
+      year: 2022.06
+    - title: Academic Excellence Scholarship
+      institution: Seoul National University (SNU), ROK
+      year: 2021
 
-- title: Academic Interests
-  type: nested_list
+- title: Projects
+  type: time_table
   contents:
-    - title: Topic 1.
-      items: 
-        - Description 1.
-        - Description 2.
-    - title: Topic 2.
-      items:
-        - Description 1.
-        - Description 2.
+    - title: Product Instance Segmentation in Retail Ready Package with Knowledge Distillation
+      institution: SHINSEGAE I&C
+      year: 2023.04 - 2024.01
+    - title: Motion Blur- and Blocking-Resistant Product Feature Extraction Technologies
+      institution: SHINSEGAE I&C
+      year: 2022.09 - 2023.03
+    - title: Physics-Based Direct Simulation of Multiple UNDEX Using High-Fidelity Numeric and Accurate Description of Thermodynamics and Phase
+      institution: Office of Naval Research (ONR)
+      year: 2020.09 - 2022.08
 
-- title: Other Interests
-  type: list
+- title: Teaching Experiences
+  type: time_table 
   contents:
-    - <u>Hobbies:</u> Hobby 1, Hobby 2, etc.
+          - title: Probability and Statistics, Teaching Assistant
+            institution: Korea Advanced Institute of Science and Technology
+            data: Winter 2023
+          - title: Compressible Fluid Dynamics, Teaching Assistant
+            institution: Seoul National University
+            data: Spring 2021
+          - title: EDISON CFD Software Program, Lecturer
+            institution: Seoul National University
+            data: Fall 2021, Spring 2021, and Fall 2020
+
+- title: Careers
+  type: time_table
+  contents:
+          - title: Intern Research Student
+            institution: Electronics and Telecommunications Research Institute (ETRI), <br> Daejeon, ROK
+            data: Summer 2019 and Winter 2020
+
+- title: Skills
+  type: map
+  contents:
+    - name: Programming languages
+      value: C++, Python, Matlab, and Fotran
+    - name: AI Frameworks
+      value: PyTorch and Tensorflow
+    - name: Engineering Tools
+      value: PointWise and Tecplot
+

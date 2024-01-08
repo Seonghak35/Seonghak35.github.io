@@ -27,7 +27,7 @@
             {% if content.title %}
             <h6 class="title font-weight-bold ml-1 ml-md-4">{{content.title}}</h6>
             {% endif %}
-            {% if content.department or content.institution %}
+            {% if content.data or content.paper or content.department or content.institution%}
             <table class="table-cv ml-1 ml-md-4 institution">
             <tbody>
               {% if content.institution %}
@@ -38,10 +38,24 @@
               {% endif %}
               {% if content.department %}
               <tr>
-                <td style="vertical-align: top; text-align: center;" class="department"><i class="fa-regular fa-circle-dot icondepartment"></i></td>
+                <td style="vertical-align: top; text-align: center;" class="department"><i class="fa-solid fa-pen icondepartment"></i></td>
                 <td class="department">{{content.department}}</td>
               </tr>
               {% endif %}
+              {% if content.paper %}
+              <tr>
+                <td style="vertical-align: top; text-align: center;" class="paper"><i class="fa-solid fa-book icondepartment"></i></td>
+                <td class="paper">{{content.paper}}</td>
+              </tr>
+              {% endif %}
+              {% if content.data %}
+              <tr>
+                <td style="vertical-align: top; text-align: center;" class="data"><i class="fa-solid fa-hourglass-start icondepartment"></i></td>
+                <td class="data">{{content.data}}</td>
+              </tr>
+              {% endif %}
+
+
             </tbody>
             </table>
             {% endif %}
