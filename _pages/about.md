@@ -19,8 +19,12 @@ selected_papers: false # includes a list of papers marked as "selected={true}"
 social: false # includes social icons at the bottom of the page
 ---
 
-Write your biography here. Tell the world about yourself. Link to your favorite [subreddit](http://reddit.com). You can put a picture in, too. The code is already in, just name your picture `prof_pic.jpg` and put it in the `img/` folder.
+My keen interest lies in <strong>comprehending and analyzing the complex flow phenomena omnipresent in our surroundings, governed by the challenging Navier-Stokes equations.</strong> The near-impossibility of analytically solving this equation fuels my fascination with `computational fluid dynamics (CFD)`, a field adept at addressing it by substituting differential operators with numerical counterparts.
 
-Put your address / P.O. box / other info right below your picture. You can also disable any of these elements by editing `profile` property of the YAML header of your `_pages/about.md`. Edit `_bibliography/papers.bib` and Jekyll will render your [publications page](/al-folio/publications/) automatically.
+During my studies at [SNU](https://aerospace.snu.ac.kr/), I delved into researching `multiphase flows`, which are more complicated than single-phase flows. Specifically, I concentrated on `bubble dynamics`, employing advanced numerical methods. My research, which scrutinized the impact of phase change on bubble dynamics, earned recognition with the Best Paper Award at the NCFE.
 
-Link to your social media connections, too. This theme is set up to use [Font Awesome icons](https://fontawesome.com/) and [Academicons](https://jpswalsh.github.io/academicons/), like the ones below. Add your Facebook, Twitter, LinkedIn, Google Scholar, or just disable all of them.
+Recognizing the challenges related to setting numerous user-defined parameters in flow simulation during that research, my interest evolved towards leveraging `artificial intelligence (AI)` for simulating flows.
+
+At [KAIST](https://ee.kaist.ac.kr/), I had opportunities to learn state-of-the-art AI technologies, ranging from `computer vision` that have the potential to utilize experimental or numerical results as image data to `model compression` that can improve the efficiency of AI applications.
+
+Currently, my interests are centered on researching both `neural operators`, more directly applicable to the computation of fluids, and `numerical operators`. I believe that this dual focus can explore innovative approaches, aiming to overcome the inherent limitations of traditional computational methods. By intertwining my past accomplishments with my current research focus, <strong>I aspire to contribute significantly to the intersection of fluid dynamics and AI.</strong>
