@@ -19,7 +19,7 @@ selected_papers: false # includes a list of papers marked as "selected={true}"
 social: false # includes social icons at the bottom of the page
 ---
 
-My keen interest lies in <strong>comprehending and analyzing the complex flow phenomena omnipresent in our surroundings, governed by the challenging Navier-Stokes equations.</strong> The near-impossibility of analytically solving this equation fuels my fascination with `computational fluid dynamics (CFD)`, a field adept at addressing it by substituting differential operators with numerical counterparts.
+My keen interest lies in <strong>comprehending and analyzing the complex flow phenomena omnipresent in our surroundings</strong>, governed by the challenging Navier-Stokes equations. The near-impossibility of analytically solving this equation fuels my fascination with `computational fluid dynamics (CFD)`, a field adept at addressing it by substituting differential operators with numerical counterparts.
 
 During my studies at [SNU](https://aerospace.snu.ac.kr/), I delved into researching `multiphase flows`, which are more complicated than single-phase flows. Specifically, I concentrated on `bubble dynamics`, employing advanced numerical methods. My research, which scrutinized the impact of phase change on bubble dynamics, earned recognition with the Best Paper Award at the NCFE.
 
