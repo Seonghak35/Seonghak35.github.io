@@ -62,7 +62,7 @@ Liquid가 drop의 상태로 기체유동에 실려서 흘러가는 유동으로,
 
 <div class="row mt-3">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/flow_pattern_vertical.jpg" zoomable=true %}
+        {% include figure.html path="assets/img/flow_pattern_vertical.jpg" zoomable=true%}
     </div>
 </div>
 <div class="caption">
@@ -102,7 +102,7 @@ Plug flow와 외형상 비슷하나, 빠른 속도의 기체의 의해서 발생
 
 <div class="row mt-3">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/flow_pattern_horizontal.jpg" zoomable=true %}
+        {% include figure.html path="assets/img/flow_pattern_horizontal.jpg" zoomable=true%}
     </div>
 </div>
 <div class="caption">
