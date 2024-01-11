@@ -121,168 +121,167 @@ Plug flow와 외형상 비슷하나, 빠른 속도의 기체의 의해서 발생
 
 각 phase의 속도와 유량등 여러 변수들 간의 관계를 정의하기 위해, 위의 그림에서 보는 것처럼, 유동 단면적 $$A$$를 밀도가 $$\rho_{\ell}$$인 액체와 $$\rho_{g}$$인 기체가 각각 속도 $$u_{\ell}$$와 $$u_{g}$$로 함께 흐르는 1차원 유동을 생각할 수 있다. 각 상이 차지하는 유동 단면적을 각각 $$A_{\ell}, A_{g}$$라고 하면 다음과 같이 표현할 수 있다.
 
-\begin{equation}
+$$
 A=A_{\ell}+A_{g}
-\end{equation}
+$$
 
 여기서, 아래와 같이 기체가 차지하는 체적 $$(A_{g}\cdot\Delta z)$$을 전체 체적 $$(A\cdot\Delta z)$$으로 나누면 void fraction $$(\alpha)$$을 구할 수 있다.
 
-\begin{equation}
+$$
 \alpha = A_{g}/A
-\end{equation}
+$$
 
-\begin{equation}
+$$
 1-\alpha = A_{\ell}/A
-\end{equation}
+$$
 
 기체와 액체의 mass flow rate $$(\dot{m})$$은 각각 아래와 같으며,
 
-\begin{equation}
+$$
 \dot{m_g}=u_{g}\rho_{g}A_{g}
-\end{equation}
+$$
 
-\begin{equation}
+$$
 \dot{m_\ell}=u_{\ell}\rho_{\ell}A_{\ell}
-\end{equation}
+$$
 
 Total mass flow rate은 다음과 같다.
 
-\begin{equation}
+$$
 \dot{m}=\dot{m_g}+\dot{m_\ell}
-\end{equation}
+$$
 
 기체와 액체에 대한 volume flow rate $$(\dot{V})$$은 각각 아래와 같으며,
 
-\begin{equation}
+$$
 \dot{V_g}=u_{g}A_{g}=\dot{m_g}/\rho_{g}
-\end{equation}
+$$
 
-\begin{equation}
+$$
 \dot{V_\ell}=u_{\ell}A_{\ell}=\dot{m_\ell}/\rho_{\ell}
-\end{equation}
+$$
 
 Total volume flow rate은 다음과 같다.
 
-\begin{equation}
+$$
 \dot{V}=\dot{V_g}+\dot{V_\ell}
-\end{equation}
+$$
 
 Total mass flow rate에 대한 기체 mass flow rate의 비를 quality 또는 mass quality $$(x)$$라고 부르며, 아래와 같이 표현한다.
 
-\begin{equation}
+$$
 x=\dot{m_g}/\dot{m}
-\end{equation}
+$$
 
-\begin{equation}
+$$
 1-x=\dot{m_\ell}/\dot{m}
-\end{equation}
+$$
 
 단위 면적당 mass flow rate인 mass flux $$(J)$$는 아래와 같은 relation을 가진다.
 
-\begin{equation}
+$$
 J_{\ell} = \dot{m_\ell}/A
-\end{equation}
+$$
 
-\begin{equation}
+$$
 J_{g} = \dot{m_g}/A
-\end{equation}
+$$
 
-\begin{equation}
+$$
 J = \dot{m}/A = J_{\ell} + J_{g}
-\end{equation}
+$$
 
 단위 면적당 volume flow rate인 superficial velocity $$(S)$$는 아래와 같은 relation을 가진다.
 
-\begin{equation}
+$$
 S_\ell=\dot{V_\ell}/A
-\end{equation}
+$$
 
-\begin{equation}
+$$
 S_g=\dot{V_g}/A
-\end{equation}
+$$
 
-\begin{equation}
+$$
 S = \dot{V}/A =S_\ell + S_g
-\end{equation}
+$$
 
 total volume flow rate에 대한 기체 volume flow rate의 비를 volume quality $$(\beta)$$라고 정의하며, 아래와 같다.
 
-\begin{equation}
+$$
 \beta = \dot{V_g}/\dot{V}
-\end{equation}
+$$
 
-\begin{equation}
+$$
 1-\beta = \dot{V_\ell}/\dot{V}
-\end{equation}
+$$
 
 앞서 정의한 void fraction $$(\alpha)$$, mass flow rate $$(\dot{m})$$, mass flux $$(J)$$, volume flow rate $$(\dot{V})$$, superficial velocity $$(S)$$, mass quality $$(x)$$, volume quality $$(\beta)$$와 기체 및 액체의 실제 속도 $$(u_g, u_\ell)$$간의 관계식을 정리하면 다음과 같다.
 
-\begin{equation}
+$$
 u_g = \dot{m_g}/\rho_{g}A_g = \dot{V_g}/A_g=Jx/\alpha\rho_g
-\end{equation}
+$$
 
-\begin{equation}
+$$
 u_\ell = \dot{m_\ell}/\rho_\ell A_\ell=\dot{V_\ell}/A_\ell=J(1-x)/(1-\alpha)\rho_\ell
-\end{equation}
+$$
 
-\begin{equation}
+$$
 S_g=u_g\alpha=S\beta=Jx/\rho_g
-\end{equation}
+$$
 
-\begin{equation}
+$$
 S_\ell=u_\ell(1-\alpha)=S(1-\beta)=J(1-x)/\rho_\ell
-\end{equation}
+$$
 
-\begin{equation}
+$$
 \frac{u_g}{u_\ell}=\frac{x}{1-x}\frac{\rho_\ell}{\rho_g}\frac{1-\alpha}{\alpha}
-\end{equation}
+$$
 
 기체와 액체간의 relative velocity는 아래와 같으며,
 
-\begin{equation}
+$$
 u_{g,\ell}=u_g - u_\ell
-\end{equation}
+$$
 
-\begin{equation}
+$$
 u_{\ell, g} = u_\ell - u_g
-\end{equation}
+$$
 
 기체 (또는 액체)속도와 superficial velocity와의 relative velocity인 drift velocity는 다음과 같다.
 
-\begin{equation}
+$$
 u_{g, \text{s}}=u_g - S
-\end{equation}
+$$
 
-\begin{equation}
+$$
 u_{\ell, \text{s}}=u_\ell - S
-\end{equation}
+$$
 
 drift flux (평균 속도에 대한 각 phase의 superficial velocity)는 아래와 같은 relation을 가진다.
 
-\begin{equation}
+$$
 S_{g, \ell}=\alpha(u_g - S)=\alpha u_{g,s}
-\end{equation}
+$$
 
-\begin{equation}
+$$
 S_{\ell, g}=(1-\alpha)(u_\ell-S)=(1-\alpha)u_{\ell,s}
-\end{equation}
+$$
 
-\begin{equation}
+$$
 S_{g, \ell} = -S_{\ell, g}
-\end{equation}
+$$
 
-\begin{equation}
+$$
 S_{g, \ell} = (1-\alpha)S_g - \alpha S_\ell
-\end{equation}
+$$
 
-\begin{equation}
+$$
 S_{\ell, g} = \alpha S_\ell - (1-\alpha)S_g
-\end{equation}
+$$
 
-\begin{equation}
+$$
 S_{g,\ell} = \alpha(1-\alpha)u_{g, \ell}
-\end{equation}
-
+$$
 
 ## Flow Patterns Maps
 
