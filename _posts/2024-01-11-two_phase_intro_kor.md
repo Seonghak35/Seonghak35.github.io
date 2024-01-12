@@ -6,7 +6,6 @@ description: This is based on the Two-phase flow heat transfer book.
 tags: multiphase_flow
 categories: CFD
 giscus_comments: false
-related_posts: false
 toc:
   sidebar: left
 ---
