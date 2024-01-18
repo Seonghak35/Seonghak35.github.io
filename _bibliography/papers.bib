@@ -9,12 +9,12 @@ string{aps = {American Physical Society,}}
   title={Effect of Non-isothermal Phase Change on Multiple Bubble Pulsations},
   author={Kim, Seonghak and Choi, Kyungjun and Kim, Chongam},
   journal={International Journal of Aeronautical and Space Sciences},
-  pages={1--14},
+  pages={1-14},
   year={2023},
+  month={},
   publisher={Springer},
   html={https://link.springer.com/article/10.1007/s42405-023-00581-9},
   abstract={Main reasons for the damage to submerged structures include shock waves and high-velocity jetting hits at the collapse of the cavitation bubbles, which repeatedly occur in subsequent bubble periods. Although other methods, e.g., experiments and theoretical approaches, have been conducted to gain knowledge of bubble dynamics, these approaches have difficulty in capturing microscopic phase changes and are not suitable for largely deforming motion, respectively. Therefore, numerical simulations using Navier–Stokes equations or Euler equations have been used to describe the bubble’s dynamic behaviors and detailed physical phenomena inside the bubble. Nevertheless, previous numerical simulations had limitations in expressing realistic and accurate bubble dynamics. For example, their results focused only on the first bubble period, not on multiple periods; thus, they could not obtain the information about the continuous shock loading near the structures. More noticeably, the thermal effect in multiple pulsations has never been addressed; since the pressure and temperature inside the bubble are formed near the critical point, the thermal effect has to be considered for accurate computations. Herein, the isothermal and non-isothermal phase change models are applied to observe the phase change effect and thermal effect on the bubble dynamics, respectively. Contrary to the isothermal model, which captures bubble dynamics up to the second bubble period, the non-isothermal model accurately expresses bubble dynamics up to the third bubble period, which is closely related to the thermal effect at the collapse region.},
-  selected={true},
 }
 
 
@@ -27,6 +27,7 @@ string{aps = {American Physical Society,}}
   volume={285},
   pages={115414},
   year={2023},
+  month={},
   publisher={Elsevier},
   abstract={During cavitation bubble pulsations, a phase change intensively occurs near the collapsing moment due to high pressure and temperature inside bubbles, accompanying distinctive flow features: the rate of evaporation and condensation significantly changes according to the phase change regime. To account for this non-isothermal effect, the high-fidelity computational framework incorporating the physics-based cavitation model and a new fluid property model based on artificial neural network is proposed. The key finding of this study is the interplay between the thermal and inertial effects during multiple pulsations. At the early stages of bubble contraction, the phase change is primarily driven by fluid inertia. However, as the bubble continues to compress, the thermal effect becomes dominant and controls the entire phase change region at each moment of collapse. It is observed that the isothermal model relying on the inertial bubble growth rate only, does not capture this transition of dominance and eventually fails to predict multiple pulsations. The physics-based cavitation model successfully captures the bubble pulsation beyond the second collapse. These findings highlight that explicit consideration of the non-isothermal effect is essential for problems with varying phase change regimes, and a phase change model reflecting this effect is vital for accurate computations.},
   html={https://doi.org/10.1016/j.oceaneng.2023.115414},
@@ -38,6 +39,7 @@ string{aps = {American Physical Society,}}
   author={Kim*, Seonghak and Ham*, Gyeongdo and Cho*, Yucheol and Kim, Daeshik},
   journal={arXiv preprint arXiv:2311.13934},
   year={2023},
+  month={},
   abstract={The improvement in the performance of efficient and lightweight models (i.e., the student model) is achieved through knowledge distillation (KD), which involves transferring knowledge from more complex models (i.e., the teacher model). However, most existing KD techniques rely on Kullback-Leibler (KL) divergence, which has certain limitations. First, if the teacher distribution has high entropy, the KL divergence's mode-averaging nature hinders the transfer of sufficient target information. Second, when the teacher distribution has low entropy, the KL divergence tends to excessively focus on specific modes, which fails to convey an abundant amount of valuable knowledge to the student. Consequently, when dealing with datasets that contain numerous confounding or challenging samples, student models may struggle to acquire sufficient knowledge, resulting in subpar performance. Furthermore, in previous KD approaches, we observed that data augmentation, a technique aimed at enhancing a model's generalization, can have an adverse impact. Therefore, we propose a Robustness-Reinforced Knowledge Distillation (R2KD) that leverages correlation distance and network pruning. This approach enables KD to effectively incorporate data augmentation for performance improvement. Extensive experiments on various datasets, including CIFAR-100, FGVR, TinyImagenet, and ImageNet, demonstrate our method's superiority over current state-of-the-art methods.},
   arxiv={2311.13934}
 }
@@ -48,6 +50,7 @@ string{aps = {American Physical Society,}}
   author={Kim*, Seonghak and Ham*, Gyeongdo and Lee, Suin and Jang, Donggon and Kim, Daeshik},
   journal={arXiv preprint arXiv:2311.14334},
   year={2023},
+  month={},
   abstract={To apply the latest computer vision techniques that require a large computational cost in real industrial applications, knowledge distillation methods (KDs) are essential. Existing logit-based KDs apply the constant temperature scaling to all samples in dataset, limiting the utilization of knowledge inherent in each sample individually. In our approach, we classify the dataset into two categories (i.e., low energy and high energy samples) based on their energy score. Through experiments, we have confirmed that low energy samples exhibit high confidence scores, indicating certain predictions, while high energy samples yield low confidence scores, meaning uncertain predictions. To distill optimal knowledge by adjusting non-target class predictions, we apply a higher temperature to low energy samples to create smoother distributions and a lower temperature to high energy samples to achieve sharper distributions. When compared to previous logit-based and feature-based methods, our energy-based KD (Energy KD) achieves better performance on various datasets. Especially, Energy KD shows significant improvements on CIFAR-100-LT and ImageNet datasets, which contain many challenging samples. Furthermore, we propose high energy-based data augmentation (HE-DA) for further improving the performance. We demonstrate that meaningful performance improvement could be achieved by augmenting only 20-50% of dataset, suggesting that it can be employed on resource-limited devices. To the best of our knowledge, this paper represents the first attempt to make use of energy scores in KD and DA, and we believe it will greatly contribute to future research.},
   arxiv={2311.14334}
 }
@@ -58,6 +61,7 @@ string{aps = {American Physical Society,}}
   author={Ham*, Gyeongdo and Kim*, Seonghak and Lee, Suin and Lee, Jae-Hyeok and Kim, Daeshik},
   journal={arXiv preprint arXiv:2311.14307},
   year={2023},
+  month={},
   abstract={Previous logits-based Knowledge Distillation (KD) have utilized predictions about multiple categories within each sample (i.e., class predictions) and have employed Kullback-Leibler (KL) divergence to reduce the discrepancy between the student and teacher predictions. Despite the proliferation of KD techniques, the student model continues to fall short of achieving a similar level as teachers. In response, we introduce a novel and effective KD method capable of achieving results on par with or superior to the teacher models performance. We utilize teacher and student predictions about multiple samples for each category (i.e., batch predictions) and apply cosine similarity, a commonly used technique in Natural Language Processing (NLP) for measuring the resemblance between text embeddings. This metric's inherent scale-invariance property, which relies solely on vector direction and not magnitude, allows the student to dynamically learn from the teacher's knowledge, rather than being bound by a fixed distribution of the teacher's knowledge. Furthermore, we propose a method called cosine similarity weighted temperature (CSWT) to improve the performance. CSWT reduces the temperature scaling in KD when the cosine similarity between the student and teacher models is high, and conversely, it increases the temperature scaling when the cosine similarity is low. This adjustment optimizes the transfer of information from the teacher to the student model. Extensive experimental results show that our proposed method serves as a viable alternative to existing methods. We anticipate that this approach will offer valuable insights for future research on model compression.},
   arxiv={2311.14307}
 }
