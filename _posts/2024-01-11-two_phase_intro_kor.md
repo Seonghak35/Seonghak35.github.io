@@ -10,9 +10,11 @@ toc:
   sidebar: left
 ---
 
-## Background
+## Multiphase Flow
 
 다상유동 (multiphase)은 기체, 액체 및 고체상들이 혼합되어 있는 유동을 의미한다. 다상유동은 점도, 밀도 등 물성치가 다른 2개 이상의 유체가 혼합되어 있기 때문에 각 상간의 상호작용으로 인해 단상유동과는 다른 유동현상이 나타난다. 
+
+### Two-Phase Flow
 
 고체 혼합물과는 달리 (고체 형상이 녹거나 어는 경우를 제외하고), 기체-액체 2상 유동 (gas-liquid two-phase flow)에서는 상 경계면이 지속적으로 변하고, 각 상 내부의 유동이 존재하기 때문에 복잡하다. 또한 이러한 기체-액체 2상 유동은 상변화 열전달 (phase change heat transfer)현상과 연관되어 있다.
 
@@ -22,13 +24,13 @@ toc:
 
 + 실험을 통하여 correlation을 얻는 방법
   + 대형장치내의 2상 유동을 실험실 규모의 장치에서 예측할 수 있도록 모사하는 scaling law가 필요
-+ differential analysis
++ Differential analysis
   + 미소체적에 대한 balance equation으로부터 conservation equation을 얻고, 이를 풀어서 각 상의 속도, 온도, 농도 분포등을 예측
   + 보존방정식을 푸는 데 필수적인 constitutive relations (e.g., 각 상의 상호작용에 의한 난류현상의 변화를 고려한 각 상의 난류 모델, 상 경계면 형상 및 면적의 변화에 대한 모델) 필요
-+ integral analysis
++ Integral analysis
   + 속도, 온도에 대해 적절한 분포함수 형태를 가정하고, 관심있는 유동영역에서 전반적인 보존관계를 만족시킬 수 있는 분포함수의 변수를 결정
   + 적당한 분포함수의 가정을 위해서는 유동의 물리적 현상 파악이 필요
-+ flow pattern에 관계없이 간단한 거시적 모델을 세워 유동을 기술하는 방법 (e.g., homogeneous mixture model)
++ Flow pattern에 관계없이 간단한 거시적 모델을 세워 유동을 기술하는 방법 (e.g., homogeneous mixture model)
 
 ## Basic Flow Patterns
 
