@@ -82,7 +82,7 @@ $$
 0=\frac{1}{r}\frac{\partial}{\partial r}\left(\mu r\frac{\partial u}{\partial r}\right)-\rho_e\frac{\partial}{\partial z}\left(\phi + \psi\right)
 $$
 
-여기서 대칭염 용액이기 때문에, charge density $$\rho_e$$는 다음과 같이 표현될 수 있으며,
+여기서 monovalent symmetric solution이기 때문에, charge density $$\rho_e$$는 다음과 같이 표현될 수 있으며,
 
 $$
 \begin{aligned}
