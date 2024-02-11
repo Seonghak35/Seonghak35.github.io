@@ -3,8 +3,8 @@
   contents:
     - name: Full Name
       value: SeongHak KIM
-    - name: Date of Birth
-      value: 5th March 1996
+      #    - name: Date of Birth
+      #      value: 5th March 1996
     - name: Birthplace
       value: Daegu, Republic of Korea (ROK)
     - name: Nationality
@@ -35,6 +35,14 @@
 - title: Research Experiences
   type: time_table
   contents:
+    - title: Researcher
+      institution: Korea Institute of Science and Technology (KIST), Seoul, ROK
+      year: 2024.03 -
+      description:
+        - title: Interests
+          contents:
+            - Complex Fluids and Microfluidics
+
     - title: Student Researcher
       institution: Korea Advanced Institute of Science and Technology (KAIST), Daejeon, ROK
       department: Electrical Engineering
@@ -78,7 +86,7 @@
   contents:
     - title: Product Instance Segmentation in Retail Ready Package with Knowledge Distillation
       institution: SHINSEGAE I&C
-      year: 2023.04 - 2024.01
+      year: 2023.04 - 2024.02
     - title: Motion Blur- and Blocking-Resistant Product Feature Extraction Technologies
       institution: SHINSEGAE I&C
       year: 2022.09 - 2023.03
