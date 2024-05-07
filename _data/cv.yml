@@ -122,5 +122,5 @@
     - name: AI Frameworks
       value: PyTorch and Tensorflow
     - name: Engineering Tools
-      value: PointWise and Tecplot
+      value: COMSOL, PointWise, Tecplot, SigmaPlot, and MathType
 
