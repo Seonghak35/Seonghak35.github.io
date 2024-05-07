@@ -5,5 +5,5 @@ inline: true
 related_posts: false
 ---
 
-I'm giving a presentation on electrokinetic flow at the KSR conference! 🤔
+I successfully presented my research at the KSR! 👍
 
