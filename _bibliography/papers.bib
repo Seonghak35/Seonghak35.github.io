@@ -1,12 +1,20 @@
 ---
 ---
-
-string{aps = {American Physical Society,}}
+@article{kim2023robustness,
+  abbr={TKDE},
+  title={Robustness-Reinforced Knowledge Distillation with Correlation Distance and Network Pruning},
+  author={Kim, Seonghak and Ham, Gyeongdo and Cho, Yucheol and Kim, Daeshik},
+  journal={Transactions on Knowledge and Data Engineering},
+  year={2024},
+  month={Jul.},
+  abstract={The improvement in the performance of efficient and lightweight models (i.e., the student model) is achieved through knowledge distillation (KD), which involves transferring knowledge from more complex models (i.e., the teacher model). However, most existing KD techniques rely on Kullback-Leibler (KL) divergence, which has certain limitations. First, if the teacher distribution has high entropy, the KL divergence's mode-averaging nature hinders the transfer of sufficient target information. Second, when the teacher distribution has low entropy, the KL divergence tends to excessively focus on specific modes, which fails to convey an abundant amount of valuable knowledge to the student. Consequently, when dealing with datasets that contain numerous confounding or challenging samples, student models may struggle to acquire sufficient knowledge, resulting in subpar performance. Furthermore, in previous KD approaches, we observed that data augmentation, a technique aimed at enhancing a model's generalization, can have an adverse impact. Therefore, we propose a Robustness-Reinforced Knowledge Distillation (R2KD) that leverages correlation distance and network pruning. This approach enables KD to effectively incorporate data augmentation for performance improvement. Extensive experiments on various datasets, including CIFAR-100, FGVR, TinyImagenet, and ImageNet, demonstrate our method's superiority over current state-of-the-art methods.},
+  arxiv={2311.13934}
+}
 
 @article{KIM2024111911,
   abbr={KBS},
   title={Maximizing discrimination capability of knowledge distillation with energy function},
-  author={Kim*, Seonghak and Ham*, Gyeongdo and Lee, Suin and Jang, Donggon and Kim, Daeshik},
+  author={Kim, Seonghak and Ham, Gyeongdo and Lee, Suin and Jang, Donggon and Kim, Daeshik},
   journal={Knowledge-Based Systems},
   pages={111911},
   year={2024},
@@ -47,19 +55,7 @@ string{aps = {American Physical Society,}}
 }
 
 
-@article{kim2023robustness,
-  abbr={arXiv},
-  title={Robustness-Reinforced Knowledge Distillation with Correlation Distance and Network Pruning},
-  author={Kim*, Seonghak and Ham*, Gyeongdo and Cho*, Yucheol and Kim, Daeshik},
-  journal={arXiv preprint arXiv:2311.13934},
-  year={2023},
-  month={Nov},
-  abstract={The improvement in the performance of efficient and lightweight models (i.e., the student model) is achieved through knowledge distillation (KD), which involves transferring knowledge from more complex models (i.e., the teacher model). However, most existing KD techniques rely on Kullback-Leibler (KL) divergence, which has certain limitations. First, if the teacher distribution has high entropy, the KL divergence's mode-averaging nature hinders the transfer of sufficient target information. Second, when the teacher distribution has low entropy, the KL divergence tends to excessively focus on specific modes, which fails to convey an abundant amount of valuable knowledge to the student. Consequently, when dealing with datasets that contain numerous confounding or challenging samples, student models may struggle to acquire sufficient knowledge, resulting in subpar performance. Furthermore, in previous KD approaches, we observed that data augmentation, a technique aimed at enhancing a model's generalization, can have an adverse impact. Therefore, we propose a Robustness-Reinforced Knowledge Distillation (R2KD) that leverages correlation distance and network pruning. This approach enables KD to effectively incorporate data augmentation for performance improvement. Extensive experiments on various datasets, including CIFAR-100, FGVR, TinyImagenet, and ImageNet, demonstrate our method's superiority over current state-of-the-art methods.},
-  arxiv={2311.13934}
-}
-
-
-@article{ham2023cosine,
+article{ham2023cosine,
   abbr={arXiv},
   title={Cosine Similarity Knowledge Distillation for Individual Class Information Transfer},
   author={Ham*, Gyeongdo and Kim*, Seonghak and Lee, Suin and Lee, Jae-Hyeok and Kim, Daeshik},

@@ -1,10 +1,21 @@
+"TKDE":
+        url: https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=69
+        color: "blue"
+
+"KBS":
+        url: https://www.sciencedirect.com/journal/knowledge-based-systems
+        color: "blue"
+
+"KSR":
+        color: "gray"
+
 "IJASS":
   url: https://link.springer.com/journal/42405
-  color: "green"
+  color: "blue"
 
 "Ocean Eng.":
         url: https://www.sciencedirect.com/journal/ocean-engineering
-        color: "blue"
+        color: "green"
 
 "arXiv":
         url: https://arxiv.org/
