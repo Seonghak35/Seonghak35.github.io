@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-I have joined KIST as a master's degree researcher, exploring microfluidics with computational simulation! 🍀
+I have joined KIST as a master's degree researcher, exploring microfluidics with computational simulation!

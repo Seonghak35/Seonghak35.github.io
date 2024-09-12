@@ -5,5 +5,5 @@ inline: true
 related_posts: false
 ---
 
-My research on incorporating energy function into knowledge distillation and data augmentation published in Knowledge-Based Systems! 👏
+My research on incorporating energy function into knowledge distillation and data augmentation published in Knowledge-Based Systems!
 

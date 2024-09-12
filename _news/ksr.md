@@ -5,5 +5,5 @@ inline: true
 related_posts: false
 ---
 
-I successfully presented my research at the KSR! 👍
+I successfully presented my research at the KSR!
 

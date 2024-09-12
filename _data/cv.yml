@@ -36,13 +36,20 @@
   type: time_table
   contents:
     - title: Researcher
+      institution: Agency for Defense Development (ADD), Daejeon, ROK
+      year: 2024.10 - 
+      description:
+        - title: Interests
+          contents:
+            - Object Detection
+    - title: Intern Researcher
       institution: Korea Institute of Science and Technology (KIST), Seoul, ROK
-      year: 2024.03 -
+      department: Advanced Materials and Systems Research Division
+      year: 2024.03 - 2024.08
       description:
         - title: Interests
           contents:
             - Complex Fluids and Microfluidics
-
     - title: Student Researcher
       institution: Korea Advanced Institute of Science and Technology (KAIST), Daejeon, ROK
       department: Electrical Engineering

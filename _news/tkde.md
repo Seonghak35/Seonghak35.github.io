@@ -5,5 +5,5 @@ inline: true
 related_posts: false
 ---
 
-I received an acceptance for my research from IEEE Transactions on Knowledge and Data Engineering! 🥳
+I received an acceptance for my research from IEEE Transactions on Knowledge and Data Engineering! 
 
