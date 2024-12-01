@@ -124,13 +124,14 @@ bing_site_verification:  # out your bing-site-verification ID (Bing Webmaster)
 # Blog
 # -----------------------------------------------------------------------------
 
-blog_name: Materials # blog_name will be displayed in your blog page
-blog_description: These are study materials that I have organized. <br>Please refrain from distributing them without permission.
+blog_name: <a href="https://hakk35.tistory.com" target="_blank">成學</a> # blog_name will be displayed in your blog page
+blog_description: Please click here
+#blog_description: These are study materials that I have organized. <br>Please refrain from distributing them without permission.
 permalink: /blog/:year/:title/
 
 # Pagination
 pagination:
-  enabled: true
+  enabled: false
 
 related_blog_posts:
   enabled: false
@@ -266,8 +267,8 @@ jekyll-archives:
     tag: '/blog/tag/:name/'
     category: '/blog/category/:name/'
 
-display_tags: ['numerical method', 'multiphase flow', 'microfluidics', 'neural operator', 'computer vision', 'model compression'] # these tags will be displayed on the front page of your blog
-display_categories: ['CFD', 'AI'] # these categories will be displayed on the front page of your blog
+    #display_tags: ['numerical method', 'multiphase flow', 'microfluidics', 'neural operator', 'computer vision', 'model compression'] # these tags will be displayed on the front page of your blog
+    #display_categories: ['CFD', 'AI'] # these categories will be displayed on the front page of your blog
 
 # -----------------------------------------------------------------------------
 # Jekyll Scholar
