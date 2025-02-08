@@ -3,12 +3,14 @@
   contents:
     - name: Full Name
       value: SeongHak KIM
-      #    - name: Date of Birth
-      #      value: 5th March 1996
+    - name: Date of Birth
+      value: 5th March 1996
     - name: Birthplace
       value: Daegu, Republic of Korea (ROK)
     - name: Nationality
       value: Korean
+    - name: Languages
+      value: Korean (native), English (intermediate), Japanese (beginner)
     - name: Military Service
       value: May. 2016 - Feb. 2018 (Marine Corps)
 
@@ -37,38 +39,48 @@
   contents:
     - title: Researcher
       institution: Agency for Defense Development (ADD), Daejeon, ROK
-      year: 2024.10 - 
+      department: Defense AI R&D Institute
+      year: 2024.10 - 2055.10
       description:
         - title: Interests
           contents:
+            - Knowledge Distillation (KD)
             - Object Detection
     - title: Intern Researcher
       institution: Korea Institute of Science and Technology (KIST), Seoul, ROK
       department: Advanced Materials and Systems Research Division
       year: 2024.03 - 2024.08
       description:
+        - Supervised by <em> Dr. Myung-Suk Chun </em>
         - title: Interests
           contents:
-            - Complex Fluids and Microfluidics
+            - Complex Fluids 
+            - Microfluidics
     - title: Student Researcher
       institution: Korea Advanced Institute of Science and Technology (KAIST), Daejeon, ROK
       department: Electrical Engineering
+      paper: <font size=2>Maximizing discrimination capability of knowledge distillation with energy function</font>
       year: 2022.09 - 2024.02
       description:
         - Advised by <em> Prof. Daeshik Kim </em>
         - title: Interests
           contents:
-            - Computer Vision, Model Compression, and Knowledge Distillation (KD)
-            - Neural Operator and Physics-Informed Neural Networks (PINNs)
+            - Computer Vision
+            - Model Compression
+            - Knowledge Distillation (KD)
+              #            - Neural Operator and Physics-Informed Neural Networks (PINNs)
     - title: Student Researcher
       institution: Seoul National University (SNU), Seoul, ROK
       department: Aerospace Engineering
+      paper: <font size=2>Numerical analysis of a phase change effect on the multiple pulsations of spark-generated bubble</font>
       year: 2020.09 - 2022.08
       description:
         - Advised by <em> Prof. Chongam Kim </em>
         - title: Interests
           contents:
-            - Computational Fluid Dynamics (CFD), Multiphase Flow, and <br> Bubble Dynamics
+            - Computational Fluid Dynamics (CFD)
+            - Multiphase Flow
+            - Bubble Dynamics
 
               #- title: Open Source Projects
               #  type: time_table
@@ -125,9 +137,9 @@
   type: map
   contents:
     - name: Programming languages
-      value: C++, Python, Matlab, and Fotran
+      value: Python, C++, Fotran, and Matlab
     - name: AI Frameworks
       value: PyTorch and Tensorflow
     - name: Engineering Tools
-      value: COMSOL, PointWise, Tecplot, SigmaPlot, and MathType
+      value: COMSOL, CATIA, PointWise, Tecplot, SigmaPlot, and MathType
 
