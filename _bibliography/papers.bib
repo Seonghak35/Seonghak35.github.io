@@ -1,5 +1,16 @@
 ---
 ---
+@article{kim2025figkd,
+  abbr={ArXiv},
+  title={FiGKD: Fine-Grained Knowledge Distillation via High-Frequency Detail Transfer},
+  author={Kim, Seonghak},
+  journal={arXiv preprint arXiv:2505.11897},
+  year={2025},
+  month={May},
+  abstract={Knowledge distillation (KD) is a widely adopted technique for transferring knowledge from a high-capacity teacher model to a smaller student model by aligning their output distributions. However, existing methods often underperform in fine-grained visual recognition tasks, where distinguishing subtle differences between visually similar classes is essential. This performance gap stems from the fact that conventional approaches treat the teacher's output logits as a single, undifferentiated signal-assuming all contained information is equally beneficial to the student. Consequently, student models may become overloaded with redundant signals and fail to capture the teacher's nuanced decision boundaries. To address this issue, we propose Fine-Grained Knowledge Distillation (FiGKD), a novel frequency-aware framework that decomposes a model's logits into low-frequency (content) and high-frequency (detail) components using the discrete wavelet transform (DWT). FiGKD selectively transfers only the high-frequency components, which encode the teacher's semantic decision patterns, while discarding redundant low-frequency content already conveyed through ground-truth supervision. Our approach is simple, architecture-agnostic, and requires no access to intermediate feature maps. Extensive experiments on CIFAR-100, TinyImageNet, and multiple fine-grained recognition benchmarks show that FiGKD consistently outperforms state-of-the-art logit-based and feature-based distillation methods across a variety of teacher-student configurations. These findings confirm that frequency-aware logit decomposition enables more efficient and effective knowledge transfer, particularly in resource-constrained settings.},
+  arxiv={2505.11897},
+}
+
 @article{EAAI,
   abbr={Under Review},
   title={Teach Sample-Specific Knowledge: Seperated Distillation on the Correct and Incorrect samples},
