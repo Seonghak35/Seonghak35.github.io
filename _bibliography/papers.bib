@@ -1,5 +1,16 @@
 ---
 ---
+@article{kim2025biased,
+  abbr={ArXiv},
+  title={Biased Teacher, Balanced Student},
+  author={Kim, Seonghak},
+  journal={arXiv preprint arXiv:2506.18496},
+  year={2025},
+  month={Jun},
+  abstract={Knowledge Distillation (KD) is a widely adopted model compression technique where a compact student model learns from the output of a larger, pre-trained teacher. While effective in balanced settings, conventional KD suffers significantly when applied to long-tailed data distributions, as the teacher model tends to be biased toward head classes and provides limited supervision for tail classes. In this paper, we propose Long-Tailed Knowledge Distillation (LTKD), a novel framework tailored for class-imbalanced scenarios. We begin by reformulating the standard KD objective into two components: inter-group and intra-group Kullback-Leibler (KL) divergence, corresponding to the prediction distributions across and within class groups (head, medium, tail), respectively. This decomposition allows us to identify and quantify the sources of teacher bias. To address them, we introduce (1) a rebalanced inter-group loss that calibrates the teacher's group-level predictions and (2) a uniform intra-group loss that ensures equal contribution from all groups during distillation. Extensive experiments on CIFAR-100-LT, TinyImageNet-LT, and ImageNet-LT show that LTKD consistently outperforms existing KD methods, achieving significant gains in both overall accuracy and tail-class performance. Our results demonstrate that LTKD enables effective knowledge transfer even from biased teachers, making it a strong candidate for real-world deployment in resource-constrained and imbalanced settings.},
+  arxiv={2506.18496},
+}
+
 @article{kim2025figkd,
   abbr={ArXiv},
   title={FiGKD: Fine-Grained Knowledge Distillation via High-Frequency Detail Transfer},
