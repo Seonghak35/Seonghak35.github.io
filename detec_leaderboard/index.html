@@ -1,0 +1,410 @@
+<!doctype html>
+<html>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@100;400&display=swap" rel="stylesheet" />
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Leaderboard</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/echarts@5.3.3/dist/echarts.min.js"></script>
+
+  <link rel="icon" type="image/png" href="assets/add.png" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" />
+
+  <link href="https://cdn.jsdelivr.net/npm/prismjs@v1.x/themes/prism.css" rel="stylesheet" />
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@v1.x/components/prism-core.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@v1.x/plugins/autoloader/prism-autoloader.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/prismjs-bibtex@2.1.0/prism-bibtex.min.js"></script>
+
+
+  <style>
+    body {
+      font-family: "JetBrains Mono", monospace;
+      background-color: #ffffff;
+      color: #000000;
+    }
+
+    #content {
+      width: 75%;
+    }
+
+    th,
+    td {
+      text-align: left;
+    }
+
+    th {
+      background-color: #f2f2f2;
+    }
+
+    #notes {
+      font-size: 1em;
+    }
+
+    #notes h3 {
+      margin-top: 1em;
+      font-size: 2em;
+      text-align: center;
+    }
+
+    #notes li {
+      font-size: 1.2em;
+      font-weight: 300;
+      margin: 1em;
+    }
+
+    .form-select {
+      font-size: 1em;
+    }
+
+    @media screen and (max-width: 1400px) {
+      body {
+        font-size: 1.6vw;
+      }
+
+      #content {
+        width: 100%;
+      }
+
+      h1 {
+        font-size: 2em;
+      }
+
+      h2 {
+        font-size: 1.6em;
+      }
+
+      h3 {
+        font-size: 1.2em;
+      }
+
+      table {
+        font-size: small;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div id="content" class="container-fluid d-flex flex-column align-items-center gap-3">
+    <h1 class="text-nowrap mt-5">📊 ADD AI Models Leaderboard</h1>
+    <h3 class="fw-light text-nowrap">
+      <small id="warning">ADDEval evaluates AI models developed in ADD on a variety of datasets.<br /></small>
+    </h3>
+    <div class="d-flex flex-row justify-content-center gap-3">
+      <a href="https://add.re.kr/eps"><img
+          src="assets/add-badge.png"
+          alt="add" class="img-fluid"
+	  style="height: 25px;"/></a>
+    </div>
+    <div class="btn-group" role="group" id="Benchmark">
+      <input type="radio" class="btn-check" name="btnradio" id="mAP5095" checked />
+      <label class="btn btn-outline-primary" for="mAP5095">mAP@50:95</label>
+      <input type="radio" class="btn-check" name="btnradio" id="mAP50" />
+      <label class="btn btn-outline-primary" for="mAP50">mAP@50</label>
+    </div>
+    <div id="chart" style="width: 100%; height: 600px"></div>
+    <div class="container-fluid d-flex flex-row flex-nowrap">
+      <div class="container-fluid d-flex flex-column align-items-center">
+        <label for="plused" class="text-success mb-3">📈 Detection Accuracy (mAP@50:95)</label>
+        <table id="plused"
+          class="table table-responsive table-striped table-bordered flex-shrink-1 border border-success border-3">
+        </table>
+      </div>
+      <div class="container-fluid d-flex flex-column align-items-center">
+        <label for="origin" class="text-danger mb-3">⚡ Inference Speed (FPS)</label>
+        <table id="origin"
+          class="table table-responsive table-striped table-bordered flex-shrink-1 border border-danger border-3">
+        </table>
+      </div>
+    </div>
+    <div id="notes">
+      <h3>📝 Notes</h3>
+      <div class="inline-block mt-3">
+        <ol>
+          <li>
+		  Models are evaluated on the COCO dataset using standard object detection metrics:<strong>mAP@50</strong> and <strong>mAP@50:95</strong>.
+          </li>
+          <li>
+		  FPS (Frames Per Second) is measured on a single NVIDIA A100 GPU using batch size 1.
+          </li>
+          <li>
+		  mAP scores reflect model accuracy, while FPS reflects inference speed.
+          </li>
+          <li>
+		  <strong>"Size"</strong> refers to the model's weight file size in megabytes (MB), as used during inference.
+          </li>
+          <li>
+		  For fairness, all models are evaluated with their default inference resolution and no additional post-processing.
+          </li>
+          <li>
+		  Models with 🔗 links redirect to their official GitHub or Hugging Face pages.
+          </li>
+        </ol>
+      </div>
+    </div>
+  </div>
+
+	<script>
+	  const originTable = document.getElementById("origin");
+	  const plusedTable = document.getElementById("plused");
+	  const chartDom = document.getElementById("chart");
+	  var chart = echarts.init(chartDom);
+
+	  const dataUrl = "results.json";
+
+	  var xhr = new XMLHttpRequest();
+	  xhr.open("GET", dataUrl, false);
+	  xhr.send();
+
+	  var data;
+	  if (xhr.status === 200) {
+		data = JSON.parse(xhr.responseText);
+		data = Object.keys(data).map((key) => {
+		  return {
+			Model: key,
+			...data[key],
+		  };
+		});
+	  } else {
+		alert("Failed to load data from results.json");
+	  }
+	  const globalData = data;
+
+	  const clearTable = () => {
+		originTable.innerHTML = "";
+		plusedTable.innerHTML = "";
+	  };
+
+	  const clearChart = () => {
+		chartOption.xAxis.data = [];
+		chartOption.series[0].data = [];
+		chartOption.series[1].data = [];
+		chartOption.series[0].markLine.data = [];
+		chartOption.series[1].markLine.data = [];
+	  };
+
+	  var chartOption = {
+		legend: {
+		  data: ["base"],
+		  itemStyle: { opacity: 1.0 },
+		},
+		grid: {
+		  left: "1%",
+		  right: "4%",
+		  bottom: "3%",
+		  containLabel: true,
+		},
+		xAxis: {
+		  name: "Model Size (MB)",
+		  type: "category",
+		  boundaryGap: false,
+		  data: [],
+		  axisLabel: {
+			formatter: function (value) {
+			  return value + "MB";
+			},
+		  },
+		},
+		yAxis: {
+		  name: "Accuracy (%)",
+		  type: "value",
+		  show: true,
+		  nameTextStyle: { align: "left" },
+		  splitLine: { show: true, lineStyle: { type: "dashed" } },
+		},
+		tooltip: {
+		  trigger: "item",
+		  axisPointer: { type: "cross" },
+		},
+		series: [
+		  {
+			name: "base",
+			type: "scatter",
+			data: [],
+			itemStyle: { color: "#91cc75", opacity: 0.2 },
+			emphasis: { focus: "series" },
+			markLine: {
+			  symbol: "none",
+			  emphasis: {
+				label: {
+				  position: "middle",
+				  formatter: (params) => params.data.name,
+				},
+			  },
+			  data: [],
+			},
+		  },
+		  {
+			name: "instructed",
+			type: "scatter",
+			data: [],
+			itemStyle: { color: "#5470c6", opacity: 0.2 },
+			emphasis: { focus: "series" },
+			markLine: {
+			  symbol: "none",
+			  emphasis: {
+				label: {
+				  position: "middle",
+				  formatter: (params) => params.data.name,
+				},
+			  },
+			  data: [],
+			},
+		  },
+		],
+	  };
+
+	  const displayTable = (table, score) => {
+		const readableNameMap = {
+		  "mAP@50": "mAP@50 (%)",
+		  "mAP@50:95": "mAP@50:95 (%)",
+		  "FPS": "FPS",
+		};
+		const theaders = ["Model", readableNameMap[score] || score];
+
+		const data = globalData
+		  .filter((row) => row["metrics"][score] != null)
+		  .sort((a, b) => b["metrics"][score] - a["metrics"][score]);
+
+		const thead = document.createElement("thead");
+		const headerRow = document.createElement("tr");
+
+		const thRank = document.createElement("th");
+		thRank.textContent = "#";
+		headerRow.appendChild(thRank);
+
+		theaders.forEach((header) => {
+		  const th = document.createElement("th");
+		  th.textContent = header;
+		  headerRow.appendChild(th);
+		});
+		thead.appendChild(headerRow);
+		table.appendChild(thead);
+
+		const tbody = document.createElement("tbody");
+		let rank = 1;
+
+		data.forEach((row) => {
+		  const dataRow = document.createElement("tr");
+		  const rankCell = document.createElement("td");
+		  rankCell.textContent = rank;
+		  dataRow.appendChild(rankCell);
+
+		  const modelCell = document.createElement("td");
+		  modelCell.textContent =
+			rank === 1 ? "🥇 " : rank === 2 ? "🥈 " : rank === 3 ? "🥉 " : "";
+		  rank++;
+
+		  const modelLink = document.createElement("a");
+		  modelLink.href = row["link"];
+		  modelLink.textContent = row["Model"];
+		  modelLink.classList.add("link-underline-primary", "text-nowrap");
+		  modelCell.appendChild(modelLink);
+		  modelCell.classList.add("d-flex", "flex-nowrap");
+
+		  const opendata = row["open-data"];
+		  if (opendata.toUpperCase() === "FULL") {
+			const badge = document.createElement("span");
+			badge.textContent = "💚";
+			modelCell.appendChild(badge);
+		  } else if (opendata.toUpperCase() === "PARTIAL") {
+			const badge = document.createElement("span");
+			badge.textContent = "💙";
+			modelCell.appendChild(badge);
+		  }
+
+		  dataRow.appendChild(modelCell);
+
+		  const metricCell = document.createElement("td");
+		  metricCell.textContent = row["metrics"][score];
+		  metricCell.classList.add(score === "FPS" ? "text-danger" : "text-success");
+		  dataRow.appendChild(metricCell);
+
+		  tbody.appendChild(dataRow);
+		});
+
+		table.appendChild(tbody);
+	  };
+
+	  const displayChart = (score) => {
+		const maxMarkLineModels = 8;
+		const data = globalData
+		  .filter((model) => model["metrics"] && model["metrics"][score] != null)
+		  .sort((a, b) => b["metrics"][score] - a["metrics"][score]);
+
+		const sizeList = [...new Set(data.filter(m => m.size != null).map(m => Math.round(m.size)))].sort((a, b) => a - b);
+
+		chartOption.xAxis.data = sizeList;
+		chartOption.yAxis.max = 1 + Math.max(...data.map((model) => model["metrics"][score]));
+
+		const sizedModels = data.filter((model) => model["size"] != null);
+		const nonSizeModels = data.filter((model) => model["size"] == null).slice(0, maxMarkLineModels);
+
+		chartOption.series[0].data = [];
+		chartOption.series[0].markLine.data = [];
+
+		sizedModels.forEach((model) => {
+		  chartOption.series[0].data.push({
+			name: model["Model"],
+			value: [`${Math.round(model["size"])}`, model["metrics"][score]],
+		  });
+		});
+
+		const offsets = [[50, 0], ...Array(sizeList.length - 2).fill([0, 0]), [-50, 0]];
+
+		sizeList.forEach((size, idx) => {
+		  const bestModel = sizedModels
+			.filter((m) => Math.round(m["size"]) === size)
+			.sort((a, b) => b["metrics"][score] - a["metrics"][score])[0];
+		  if (bestModel) {
+			const point = chartOption.series[0].data.find((p) => p.name === bestModel["Model"]);
+			point.itemStyle = { opacity: 1.0 };
+			point.label = {
+			  show: true,
+			  position: "top",
+			  offset: offsets[idx],
+			  formatter: (params) => params.data.name,
+			  color: "inherit",
+			};
+		  }
+		});
+
+		chart.setOption(chartOption);
+	  };
+
+	  const map5095Radio = document.getElementById("mAP5095");
+	  const map50Radio = document.getElementById("mAP50");
+
+	  map5095Radio.addEventListener("click", function () {
+		clearTable();
+		displayTable(plusedTable, "mAP@50:95");
+		displayTable(originTable, "FPS");
+		clearChart();
+		displayChart("mAP@50:95");
+	  });
+
+	  map50Radio.addEventListener("click", function () {
+		clearTable();
+		displayTable(plusedTable, "mAP@50");
+		displayTable(originTable, "FPS");
+		clearChart();
+		displayChart("mAP@50");
+	  });
+
+
+	  // 초기 로딩 시 한 번만 실행
+	  displayTable(plusedTable, "mAP@50:95");
+	  displayTable(originTable, "FPS");
+	  displayChart("mAP@50:95");
+
+	  window.addEventListener("resize", () => {
+		chart.resize();
+	  });
+	</script>
+
+</body>
+
+</html>

@@ -155,6 +155,48 @@
     "size": 281.56,
     "type": "kd"
   },
+  "resnet32 (EnergyKD, resnet110)": {
+    "metrics": {
+      "CIFAR100": 73.68
+    },
+    "size": 281.56,
+    "type": "kd"
+  },
+  "resnet32 (EnergyDKD, resnet110)": {
+    "metrics": {
+      "CIFAR100": 74.11
+    },
+    "size": 281.56,
+    "type": "kd"
+  },
+  "resnet32 (EnergyMLKD, resnet110)": {
+    "metrics": {
+      "CIFAR100": 74.60
+    },
+    "size": 281.56,
+    "type": "kd"
+  },
+  "resnet32 (R2KD, resnet110)": {
+    "metrics": {
+      "CIFAR100": 74.09
+    },
+    "size": 281.56,
+    "type": "kd"
+  },
+  "resnet32 (R2KD w/ MixUp, resnet110)": {
+    "metrics": {
+      "CIFAR100": 74.66
+    },
+    "size": 281.56,
+    "type": "kd"
+  },
+  "resnet32 (R2KD w/ CutMix, resnet110)": {
+    "metrics": {
+      "CIFAR100": 75.04
+    },
+    "size": 281.56,
+    "type": "kd"
+  },
   "resnet32 (FiGKD, resnet110)": {
     "metrics": {
       "CIFAR100": 74.31,
@@ -220,6 +262,48 @@
     "size": 714.26,
     "type": "kd"
   },
+  "resnet8x4 (EnergyKD, resnet32x4)": {
+    "metrics": {
+      "CIFAR100": 74.60
+    },
+    "size": 714.26,
+    "type": "kd"
+  },
+  "resnet8x4 (EnergyDKD, resnet32x4)": {
+    "metrics": {
+      "CIFAR100": 76.78
+    },
+    "size": 714.26,
+    "type": "kd"
+  },
+  "resnet8x4 (EnergyMLKD, resnet32x4)": {
+    "metrics": {
+      "CIFAR100": 77.31
+    },
+    "size": 714.26,
+    "type": "kd"
+  },
+  "resnet8x4 (R2KD, resnet32x4)": {
+    "metrics": {
+      "CIFAR100": 77.01
+    },
+    "size": 714.26,
+    "type": "kd"
+  },
+  "resnet8x4 (R2KD w/ MixUp, resnet32x4)": {
+    "metrics": {
+      "CIFAR100": 78.07
+    },
+    "size": 714.26,
+    "type": "kd"
+  },
+  "resnet8x4 (R2KD w/ CutMix, resnet32x4)": {
+    "metrics": {
+      "CIFAR100": 77.70
+    },
+    "size": 714.26,
+    "type": "kd"
+  },
   "resnet8x4 (FiGKD, resnet32x4)": {
     "metrics": {
       "CIFAR100": 78.05,
@@ -274,6 +358,48 @@
     "metrics": {
       "CIFAR100": 76.63,
 	    "TinyImageNet": 60.80
+    },
+    "size": 409.30,
+    "type": "kd"
+  },
+  "WRN-16-2 (EnergyKD, WRN-40-2)": {
+    "metrics": {
+      "CIFAR100": 75.45
+    },
+    "size": 409.30,
+    "type": "kd"
+  },
+  "WRN-16-2 (EnergyDKD, WRN-40-2)": {
+    "metrics": {
+      "CIFAR100": 76.66
+    },
+    "size": 409.30,
+    "type": "kd"
+  },
+  "WRN-16-2 (EnergyMLKD, WRN-40-2)": {
+    "metrics": {
+      "CIFAR100": 77.19
+    },
+    "size": 409.30,
+    "type": "kd"
+  },
+  "WRN-16-2 (R2KD, WRN-40-2)": {
+    "metrics": {
+      "CIFAR100": 76.62
+    },
+    "size": 409.30,
+    "type": "kd"
+  },
+  "WRN-16-2 (R2KD w/ MixUp, WRN-40-2)": {
+    "metrics": {
+      "CIFAR100": 76.94
+    },
+    "size": 409.30,
+    "type": "kd"
+  },
+  "WRN-16-2 (R2KD w/ CutMix, WRN-40-2)": {
+    "metrics": {
+      "CIFAR100": 77.06
     },
     "size": 409.30,
     "type": "kd"
@@ -343,6 +469,48 @@
     "size": 339.36,
     "type": "kd"
   },  
+  "WRN-40-1 (EnergyKD, WRN-40-2)": {
+    "metrics": {
+      "CIFAR100": 74.28
+    },
+    "size": 339.36,
+    "type": "kd"
+  },
+  "WRN-40-1 (EnergyDKD, WRN-40-2)": {
+    "metrics": {
+      "CIFAR100": 74.97
+    },
+    "size": 339.36,
+    "type": "kd"
+  },
+  "WRN-40-1 (EnergyMLKD, WRN-40-2)": {
+    "metrics": {
+      "CIFAR100": 75.70
+    },
+    "size": 339.36,
+    "type": "kd"
+  },
+  "WRN-40-1 (R2KD, WRN-40-2)": {
+    "metrics": {
+      "CIFAR100": 75.24
+    },
+    "size": 339.36,
+    "type": "kd"
+  },
+  "WRN-40-1 (R2KD w/ MixUp, WRN-40-2)": {
+    "metrics": {
+      "CIFAR100": 76.02
+    },
+    "size": 339.36,
+    "type": "kd"
+  },
+  "WRN-40-1 (R2KD w/ CutMix, WRN-40-2)": {
+    "metrics": {
+      "CIFAR100": 76.21
+    },
+    "size": 339.36,
+    "type": "kd"
+  },
   "WRN-40-1 (FiGKD, WRN-40-2)": {
     "metrics": {
       "CIFAR100": 76.04,
@@ -401,6 +569,48 @@
     "size": 273.43,
     "type": "kd"
   }, 
+  "VGG8 (EnergyKD, VGG13)": {
+    "metrics": {
+      "CIFAR100": 73.73
+    },
+    "size": 273.43,
+    "type": "kd"
+  },
+  "VGG8 (EnergyDKD, VGG13)": {
+    "metrics": {
+      "CIFAR100": 74.90
+    },
+    "size": 273.43,
+    "type": "kd"
+  },
+  "VGG8 (EnergyMLKD, VGG13)": {
+    "metrics": {
+      "CIFAR100": 75.56
+    },
+    "size": 273.43,
+    "type": "kd"
+  },
+  "VGG8 (R2KD, VGG13)": {
+    "metrics": {
+      "CIFAR100": 75.26
+    },
+    "size": 273.43,
+    "type": "kd"
+  },
+  "VGG8 (R2KD w/ MixUp, VGG13)": {
+    "metrics": {
+      "CIFAR100": 75.65
+    },
+    "size": 273.43,
+    "type": "kd"
+  },
+  "VGG8 (R2KD w/ CutMix, VGG13)": {
+    "metrics": {
+      "CIFAR100": 76.40
+    },
+    "size": 273.43,
+    "type": "kd"
+  },
   "VGG8 (FiGKD, VGG13)": {
     "metrics": {
       "CIFAR100": 76.17,
@@ -506,6 +716,90 @@
     "size": 42.88,
     "type": "kd"
   },
+  "ShuffleNet-V1 (EnergyKD, WRN-40-2)": {
+    "metrics": {
+      "CIFAR100": 75.90
+    },
+    "size": 42.88,
+    "type": "kd"
+  },
+  "ShuffleNet-V1 (EnergyKD, resnet32x4)": {
+    "metrics": {
+      "CIFAR100": 75.20
+    },
+    "size": 42.88,
+    "type": "kd"
+  },
+  "ShuffleNet-V1 (EnergyDKD, WRN-40-2)": {
+    "metrics": {
+      "CIFAR100": 77.06
+    },
+    "size": 42.88,
+    "type": "kd"
+  },
+  "ShuffleNet-V1 (EnergyDKD, resnet32x4)": {
+    "metrics": {
+      "CIFAR100": 76.89
+    },
+    "size": 42.88,
+    "type": "kd"
+  },
+  "ShuffleNet-V1 (EnergyMLKD, WRN-40-2)": {
+    "metrics": {
+      "CIFAR100": 77.76
+    },
+    "size": 42.88,
+    "type": "kd"
+  },
+  "ShuffleNet-V1 (EnergyMLKD, resnet32x4)": {
+    "metrics": {
+      "CIFAR100": 77.82
+    },
+    "size": 42.88,
+    "type": "kd"
+  },
+  "ShuffleNet-V1 (R2KD, WRN-40-2)": {
+    "metrics": {
+      "CIFAR100": 77.63
+    },
+    "size": 42.88,
+    "type": "kd"
+  },
+  "ShuffleNet-V1 (R2KD, resnet32x4)": {
+    "metrics": {
+      "CIFAR100": 77.58
+    },
+    "size": 42.88,
+    "type": "kd"
+  },
+  "ShuffleNet-V1 (R2KD w/ MixUp, WRN-40-2)": {
+    "metrics": {
+      "CIFAR100": 77.87
+    },
+    "size": 42.88,
+    "type": "kd"
+  },
+  "ShuffleNet-V1 (R2KD w/ MixUp, resnet32x4)": {
+    "metrics": {
+      "CIFAR100": 78.60
+    },
+    "size": 42.88,
+    "type": "kd"
+  },
+  "ShuffleNet-V1 (R2KD w/ CutMix, WRN-40-2)": {
+    "metrics": {
+      "CIFAR100": 78.00
+    },
+    "size": 42.88,
+    "type": "kd"
+  },
+  "ShuffleNet-V1 (R2KD w/ CutMix, resnet32x4)": {
+    "metrics": {
+      "CIFAR100": 78.20
+    },
+    "size": 42.88,
+    "type": "kd"
+  },
   "ShuffleNet-V1 (FiGKD, WRN-40-2)": {
     "metrics": {
       "CIFAR100": 78.84,
@@ -522,7 +816,7 @@
     "size": 42.88,
     "type": "kd"
   },
-  
+
 
   "MobileNet-V2 (KD, ResNet50)": {
     "metrics": {
@@ -627,6 +921,90 @@
     "size": 29.23,
     "type": "kd"
   }, 
+  "MobileNet-V2 (EnergyKD, ResNet50)": {
+    "metrics": {
+      "CIFAR100": 68.97
+    },
+    "size": 29.23,
+    "type": "kd"
+  }, 
+  "MobileNet-V2 (EnergyKD, VGG13)": {
+    "metrics": {
+      "CIFAR100": 68.65
+    },
+    "size": 29.23,
+    "type": "kd"
+  },
+  "MobileNet-V2 (EnergyDKD, ResNet50)": {
+    "metrics": {
+      "CIFAR100": 70.77
+    },
+    "size": 29.23,
+    "type": "kd"
+  }, 
+  "MobileNet-V2 (EnergyDKD, VGG13)": {
+    "metrics": {
+      "CIFAR100": 77.19
+    },
+    "size": 29.23,
+    "type": "kd"
+  },
+  "MobileNet-V2 (EnergyMLKD, ResNet50)": {
+    "metrics": {
+      "CIFAR100": 71.32
+    },
+    "size": 29.23,
+    "type": "kd"
+  }, 
+  "MobileNet-V2 (EnergyMLKD, VGG13)": {
+    "metrics": {
+      "CIFAR100": 70.89
+    },
+    "size": 29.23,
+    "type": "kd"
+  },
+  "MobileNet-V2 (R2KD, ResNet50)": {
+    "metrics": {
+      "CIFAR100": 70.42
+    },
+    "size": 29.23,
+    "type": "kd"
+  }, 
+  "MobileNet-V2 (R2KD, VGG13)": {
+    "metrics": {
+      "CIFAR100": 70.85
+    },
+    "size": 29.23,
+    "type": "kd"
+  },
+  "MobileNet-V2 (R2KD w/ MixUp, ResNet50)": {
+    "metrics": {
+      "CIFAR100": 70.70
+    },
+    "size": 29.23,
+    "type": "kd"
+  }, 
+  "MobileNet-V2 (R2KD w/ MixUp, VGG13)": {
+    "metrics": {
+      "CIFAR100": 71.70
+    },
+    "size": 29.23,
+    "type": "kd"
+  },
+  "MobileNet-V2 (R2KD w/ CutMix, ResNet50)": {
+    "metrics": {
+      "CIFAR100": 70.87
+    },
+    "size": 29.23,
+    "type": "kd"
+  }, 
+  "MobileNet-V2 (R2KD w/ CutMix, VGG13)": {
+    "metrics": {
+      "CIFAR100": 71.58
+    },
+    "size": 29.23,
+    "type": "kd"
+  },
   "MobileNet-V2 (FiGKD, ResNet50)": {
     "metrics": {
       "CIFAR100": 72.08,
@@ -696,6 +1074,48 @@
     "metrics": {
       "CIFAR100": 78.44,
 	    "TinyImageNet": 68.63
+    },
+    "size": 186.82,
+    "type": "kd"
+  },
+  "ShuffleNet-V2 (EnergyKD, resnet32x4)": {
+    "metrics": {
+      "CIFAR100": 75.87
+    },
+    "size": 186.82,
+    "type": "kd"
+  },
+  "ShuffleNet-V2 (EnergyDKD, resnet32x4)": {
+    "metrics": {
+      "CIFAR100": 77.55
+    },
+    "size": 186.82,
+    "type": "kd"
+  },
+  "ShuffleNet-V2 (EnergyMLKD, resnet32x4)": {
+    "metrics": {
+      "CIFAR100": 78.64
+    },
+    "size": 186.82,
+    "type": "kd"
+  },
+  "ShuffleNet-V2 (R2KD, resnet32x4)": {
+    "metrics": {
+      "CIFAR100": 78.44
+    },
+    "size": 186.82,
+    "type": "kd"
+  },
+  "ShuffleNet-V2 (R2KD w/ MixUp, resnet32x4)": {
+    "metrics": {
+      "CIFAR100": 79.06
+    },
+    "size": 186.82,
+    "type": "kd"
+  },
+  "ShuffleNet-V2 (R2KD w/ CutMix, resnet32x4)": {
+    "metrics": {
+      "CIFAR100": 79.44
     },
     "size": 186.82,
     "type": "kd"
