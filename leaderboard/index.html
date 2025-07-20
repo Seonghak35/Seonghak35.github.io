@@ -154,12 +154,12 @@
           class="table table-responsive table-striped table-bordered flex-shrink-1 border border-primary border-3">
         </table>
       </div>
-      <div class="container-fluid d-flex flex-column align-items-center">
+      <!-- <div class="container-fluid d-flex flex-column align-items-center">
         <label for="origin" class="text-warning mb-3">👩🏻‍💻 FLOPs (M)</label>
         <table id="origin"
           class="table table-responsive table-striped table-bordered flex-shrink-1 border border-warning border-3">
         </table>
-      </div>
+      </div> -->
     </div>
     <div id="notes">
       <h3>Acknowledgements</h3>
@@ -172,7 +172,7 @@
   </div>
 
 	<script>
-	  const originTable = document.getElementById("origin");
+	//   const originTable = document.getElementById("origin");
 	  const plusedTable = document.getElementById("plused");
 	  const chartDom = document.getElementById("chart");
 	  var chart = echarts.init(chartDom);
@@ -197,7 +197,7 @@
 	  const globalData = data;
 
 	  const clearTable = () => {
-		originTable.innerHTML = "";
+		// originTable.innerHTML = "";
 		plusedTable.innerHTML = "";
 	  };
 
@@ -504,7 +504,7 @@
 	  cifar100Radio.addEventListener("click", function () {
 		clearTable();
 		displayTable(plusedTable, "CIFAR100");
-		displayTable(originTable, "FLOPs");
+		// displayTable(originTable, "FLOPs");
 		clearChart();
 		displayChart("CIFAR100");
 	  });
@@ -512,7 +512,7 @@
 	  tinyimagenetRadio.addEventListener("click", function () {
 		clearTable();
 		displayTable(plusedTable, "TinyImageNet");
-		displayTable(originTable, "FLOPs");
+		// displayTable(originTable, "FLOPs");
 		clearChart();
 		displayChart("TinyImageNet");
 	  });
@@ -520,7 +520,7 @@
 	  imagenetRadio.addEventListener("click", function () {
 		clearTable();
 		displayTable(plusedTable, "ImageNet");
-		displayTable(originTable, "FLOPs");
+		// displayTable(originTable, "FLOPs");
 		clearChart();
 		displayChart("ImageNet");
 	  });
@@ -528,7 +528,7 @@
 	  cub200Radio.addEventListener("click", function () {
 		clearTable();
 		displayTable(plusedTable, "CUB200");
-		displayTable(originTable, "FLOPs");
+		// displayTable(originTable, "FLOPs");
 		clearChart();
 		displayChart("CUB200");
 	  });
@@ -536,7 +536,7 @@
 	  mit67Radio.addEventListener("click", function () {
 		clearTable();
 		displayTable(plusedTable, "MIT67");
-		displayTable(originTable, "FLOPs");
+		// displayTable(originTable, "FLOPs");
 		clearChart();
 		displayChart("MIT67");
 	  });
@@ -544,7 +544,7 @@
 
 	  // 초기 로딩 시 한 번만 실행
 	  displayTable(plusedTable, "CIFAR100");
-	  displayTable(originTable, "FLOPs");
+	//   displayTable(originTable, "FLOPs");
 	  displayChart("CIFAR100");
 
 	  window.addEventListener("resize", () => {
@@ -555,7 +555,7 @@
 		  const currentScore = document.querySelector('input[name="btnradio"]:checked').id;
 		  clearTable();
 		  displayTable(plusedTable, currentScore);
-		  displayTable(originTable, "FLOPs");
+		//   displayTable(originTable, "FLOPs");
 		//   clearChart();
 		//   displayChart(currentScore);
 		});
@@ -565,7 +565,7 @@
 			const currentScore = document.querySelector('input[name="btnradio"]:checked').id;
 			clearTable();
 			displayTable(plusedTable, currentScore);
-			displayTable(originTable, "FLOPs");
+			// displayTable(originTable, "FLOPs");
 			// clearChart();
 			// displayChart(currentScore);
 		  });
