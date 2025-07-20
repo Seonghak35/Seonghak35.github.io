@@ -1,0 +1,577 @@
+<!doctype html>
+<html>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@100;400&display=swap" rel="stylesheet" />
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Leaderboard</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/echarts@5.3.3/dist/echarts.min.js"></script>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" />
+
+  <link href="https://cdn.jsdelivr.net/npm/prismjs@v1.x/themes/prism.css" rel="stylesheet" />
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@v1.x/components/prism-core.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@v1.x/plugins/autoloader/prism-autoloader.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/prismjs-bibtex@2.1.0/prism-bibtex.min.js"></script>
+
+
+  <style>
+    body {
+      font-family: "JetBrains Mono", monospace;
+      background-color: #ffffff;
+      color: #000000;
+    }
+	
+
+    .text-purple {
+      color: #800080;
+      font-weight: bold;
+    }
+
+
+    #content {
+      width: 75%;
+    }
+
+    th,
+    td {
+      text-align: left;
+    }
+
+    th {
+      background-color: #f2f2f2;
+    }
+
+    #notes {
+      font-size: 1em;
+    }
+
+    #notes h3 {
+      margin-top: 1em;
+      font-size: 2em;
+      text-align: center;
+    }
+
+    #notes li {
+      font-size: 1.2em;
+      font-weight: 300;
+      margin: 1em;
+    }
+
+    .form-select {
+      font-size: 1em;
+    }
+
+    @media screen and (max-width: 1400px) {
+      body {
+        font-size: 1.6vw;
+      }
+
+      #content {
+        width: 100%;
+      }
+
+      h1 {
+        font-size: 2em;
+      }
+
+      h2 {
+        font-size: 1.6em;
+      }
+
+      h3 {
+        font-size: 1.2em;
+      }
+
+      table {
+        font-size: small;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div id="content" class="container-fluid d-flex flex-column align-items-center gap-3">
+    <h1 class="text-nowrap mt-5">📊 KD Leaderboard</h1>
+    <h3 class="fw-light text-nowrap">
+      <small id="warning">Knowledge Distillation performance on a variety of datasets.<br /></small>
+    </h3>
+    <div class="d-flex flex-row justify-content-center gap-3">
+      <a href="https://doi.org/10.1016/j.knosys.2024.111911"><img
+          src="https://img.shields.io/badge/EnergyKD-KBS-efe20b.svg?style=for-the-badge" alt="kbs"
+          class="img-fluid" /></a>
+
+      <a href="https://ieeexplore.ieee.org/document/10623281"><img
+          src="https://img.shields.io/badge/R2KD-TKDE-14303e.svg?style=for-the-badge" alt="tkde"
+          class="img-fluid" /></a>
+
+      <a href="https://arxiv.org/pdf/2505.11897"><img
+          src="https://img.shields.io/badge/FiGKD-arXiv-b31b1b.svg?style=for-the-badge" alt="arxiv"
+          class="img-fluid" /></a>
+    </div>
+    <div class="btn-group" role="group" id="Benchmark">
+      <input type="radio" class="btn-check" name="btnradio" id="CIFAR100" checked />
+      <label class="btn btn-outline-primary" for="CIFAR100">CIFAR100</label>
+      <input type="radio" class="btn-check" name="btnradio" id="TinyImageNet" />
+      <label class="btn btn-outline-primary" for="TinyImageNet">TinyImageNet</label>
+      <input type="radio" class="btn-check" name="btnradio" id="ImageNet" />
+      <label class="btn btn-outline-primary" for="ImageNet">ImageNet</label>
+      <input type="radio" class="btn-check" name="btnradio" id="CUB200" />
+      <label class="btn btn-outline-primary" for="CUB200">CUB200</label>
+	  <input type="radio" class="btn-check" name="btnradio" id="MIT67" />
+      <label class="btn btn-outline-primary" for="MIT67">MIT67</label>
+    </div>
+    <div id="chart" style="width: 100%; height: 600px"></div>
+	
+	<div class="form-check">
+	  <input class="form-check-input" type="checkbox" value="" id="topAccuracyOnly">
+	  <label class="form-check-label text-dark" for="topAccuracyOnly">
+		Show Only <strong>Top-5</strong> Models
+	  </label>
+	</div>
+	
+	<div class="form-check">
+	  <input class="form-check-input" type="checkbox" value="" id="onlyBaseline">
+	  <label class="form-check-label text-dark" for="onlyBaseline">
+		Show only <strong class="text-primary">baseline</strong> models
+	  </label>
+	</div>
+
+	<div class="form-check">
+	  <input class="form-check-input" type="checkbox" value="" id="onlyKD">
+	  <label class="form-check-label text-dark" for="onlyKD">
+		Show only <strong class="text-purple">KD</strong> models
+	  </label>
+	</div>
+
+    <div class="container-fluid d-flex flex-row flex-nowrap">
+      <div class="container-fluid d-flex flex-column align-items-center">
+        <label id="tableTitle" for="plused" class="text-primary mb-3">📈 Top-1 Accuracy (%)</label>
+        <table id="plused"
+          class="table table-responsive table-striped table-bordered flex-shrink-1 border border-primary border-3">
+        </table>
+      </div>
+      <div class="container-fluid d-flex flex-column align-items-center">
+        <label for="origin" class="text-warning mb-3">👩🏻‍💻 FLOPs (M)</label>
+        <table id="origin"
+          class="table table-responsive table-striped table-bordered flex-shrink-1 border border-warning border-3">
+        </table>
+      </div>
+    </div>
+    <div id="notes">
+      <h3>Acknowledgements</h3>
+      <div class="inline-block mt-3">
+        <ol>
+		  Thanks for the authors of EvalPlus for sharing the template source code.
+        </ol>
+      </div>
+    </div>
+  </div>
+
+	<script>
+	  const originTable = document.getElementById("origin");
+	  const plusedTable = document.getElementById("plused");
+	  const chartDom = document.getElementById("chart");
+	  var chart = echarts.init(chartDom);
+
+	  const dataUrl = "results.json";
+	  var xhr = new XMLHttpRequest();
+	  xhr.open("GET", dataUrl, false);
+	  xhr.send();
+
+	  var data;
+	  if (xhr.status === 200) {
+		data = JSON.parse(xhr.responseText);
+		data = Object.keys(data).map((key) => {
+		  return {
+			Model: key,
+			...data[key],
+		  };
+		});
+	  } else {
+		alert("Failed to load data from results.json");
+	  }
+	  const globalData = data;
+
+	  const clearTable = () => {
+		originTable.innerHTML = "";
+		plusedTable.innerHTML = "";
+	  };
+
+	  const clearChart = () => {
+		  chart.clear();
+		};
+
+	  var chartOption = {
+		legend: {
+		  data: ["baseline", "kd"],
+		  itemStyle: { opacity: 1.0 },
+		},
+		grid: {
+		  left: "1%",
+		  right: "4%",
+		  bottom: "3%",
+		  containLabel: true,
+		},
+		xAxis: {
+		  name: "FLOPs (M)",
+		  type: "value",
+		  boundaryGap: false,
+		  data: [],
+		  axisLabel: {
+			formatter: function (value) {
+			  return value + "M";
+			},
+		  },
+		},
+		yAxis: {
+		  name: "Top-1 Accuracy (%)",
+		  type: "value",
+		  show: true,
+		  nameTextStyle: { align: "left" },
+		  splitLine: { show: true, lineStyle: { type: "dashed" } },
+		},
+		tooltip: {
+		  trigger: "item",
+		  axisPointer: { type: "cross" },
+		},
+		series: [
+		  {
+			name: "baseline",
+			type: "scatter",
+			data: [],
+			itemStyle: { color: "#1f77b4", opacity: 0.5 },
+			emphasis: { focus: "series" },
+			markLine: {
+			  symbol: "none",
+			  emphasis: {
+				label: {
+				  position: "middle",
+				  formatter: (params) => params.data.name,
+				},
+			  },
+			  data: [],
+			},
+		  },
+		  {
+			name: "kd",
+			type: "scatter",
+			data: [],
+			itemStyle: { color: "#9467bd", opacity: 0.5 },
+			emphasis: { focus: "series" },
+			markLine: {
+			  symbol: "none",
+			  emphasis: {
+				label: {
+				  position: "middle",
+				  formatter: (params) => params.data.name,
+				},
+			  },
+			  data: [],
+			},
+		  },
+		],
+	  };
+
+	  const displayTable = (table, score) => {
+		const readableNameMap = {
+		  "CIFAR100": "CIFAR100 (%)",
+		  "TinyImageNet": "TinyImageNet (%)",
+		  "ImageNet": "ImageNet (%)",
+		  "CUB200": "CUB200 (%)",
+		  "MIT67": "MIT67 (%)"
+		};
+		const theaders = ["Model", readableNameMap[score] || score];
+
+		let data = globalData
+		  .filter((row) =>
+			score === "FLOPs"
+			  ? row.size != null
+			  : row.metrics && row.metrics[score] != null
+		  );
+
+		// 🔽 type 필터링 조건 추가
+		const baselineOnly = document.getElementById("onlyBaseline")?.checked;
+		const kdOnly = document.getElementById("onlyKD")?.checked;
+
+		if (baselineOnly && !kdOnly) {
+		data = data.filter((row) => row.type === "baseline");
+		} else if (kdOnly && !baselineOnly) {
+		data = data.filter((row) => row.type === "kd");
+		}
+
+		// 🔽 2. 정렬
+		data = data.sort((a, b) =>
+		score === "FLOPs"
+			? a.size - b.size
+			: b.metrics[score] - a.metrics[score]
+		);
+
+		// 🔽 3. Top-5 필터
+		const topOnly = document.getElementById("topAccuracyOnly")?.checked || false;
+		if (topOnly) {
+		data = data.slice(0, 5);
+		}
+
+		const thead = document.createElement("thead");
+		const headerRow = document.createElement("tr");
+
+		const thRank = document.createElement("th");
+		thRank.textContent = "#";
+		headerRow.appendChild(thRank);
+
+		theaders.forEach((header) => {
+		  const th = document.createElement("th");
+		  th.textContent = header;
+		  headerRow.appendChild(th);
+		});
+		thead.appendChild(headerRow);
+		table.appendChild(thead);
+
+		const tbody = document.createElement("tbody");
+		let rank = 1;
+
+		data.forEach((row) => {
+		  const dataRow = document.createElement("tr");
+		  const rankCell = document.createElement("td");
+		  rankCell.textContent = rank;
+		  dataRow.appendChild(rankCell);
+
+		  const modelCell = document.createElement("td");
+		  const modelName = row["Model"];
+		  const medal = rank === 1 ? "🥇 " : rank === 2 ? "🥈 " : rank === 3 ? "🥉 " : "";
+		  modelCell.textContent = medal + modelName;
+		  rank++;
+
+		  dataRow.appendChild(modelCell);
+
+		  const metricCell = document.createElement("td");
+		  metricCell.textContent = score === "FLOPs" ? row.size : row["metrics"][score];
+		  dataRow.appendChild(metricCell);
+
+		  tbody.appendChild(dataRow);
+		});
+
+		table.appendChild(tbody);
+	  };
+
+		const displayChart = (score) => {
+		  const topOnly = document.getElementById("topAccuracyOnly").checked;
+		  const maxMarkLineModels = 8;
+
+		  const data = globalData
+			.filter((row) =>
+			  score === "FLOPs"
+				? row.size != null
+				: row["metrics"] && row["metrics"][score] != null && row.size != null
+			)
+			.sort((a, b) =>
+			  score === "FLOPs"
+				? a.size - b.size
+				: b["metrics"][score] - a["metrics"][score]
+			);
+
+		  let sizedModels = data.filter((model) =>
+			  model["size"] != null && model["metrics"] && model["metrics"][score] != null
+			);
+
+			if (topOnly) {
+			  sizedModels = sizedModels
+				.sort((a, b) => b["metrics"][score] - a["metrics"][score])
+				.slice(0, 5); // 상위 10개만
+}
+		  const nonSizeModels = data.filter((model) => model["size"] == null).slice(0, maxMarkLineModels);
+
+		  const sizeList = [...new Set(sizedModels.map(m => Math.round(m.size)))].sort((a, b) => a - b);
+
+		  // 유동 축 조절
+		  const flopsList = sizedModels.map((m) => m.size);
+		  const accList = sizedModels.map((m) => m.metrics[score]);
+
+		  const xMin = Math.min(...flopsList);
+		  const xMax = Math.max(...flopsList);
+		  const xRange = xMax - xMin;
+		  const xBuffer = xRange * 0.05 || 50; // fallback 50
+
+		  const yMin = Math.min(...accList);
+		  const yMax = Math.max(...accList);
+		  const yRange = yMax - yMin;
+		  const yBuffer = yRange < 2 ? 1.0 : yRange * 0.05;
+
+		  chartOption.xAxis.min = Math.floor(xMin - xBuffer);
+		  chartOption.xAxis.max = Math.ceil(xMax + xBuffer);
+		  chartOption.yAxis.min = Math.floor(yMin - yBuffer);
+		  chartOption.yAxis.max = Math.ceil(yMax + yBuffer);
+
+		  chartOption.series[0].data = []; // baseline
+		  chartOption.series[1].data = []; // kd
+
+		  sizedModels.forEach((model) => {
+		    const point = {
+			  name: model["Model"],
+			  value: [model["size"], model["metrics"][score]],
+			  itemStyle: { opacity: 0.5 }
+		    };
+
+		    if (model.type === "baseline") {
+			  chartOption.series[0].data.push(point);
+		    } else {
+			  chartOption.series[1].data.push(point);
+		    }
+		  });
+
+		  const offsets = [[50, 0], ...Array(sizeList.length - 2).fill([0, 0]), [-50, 0]];
+
+		  sizeList.forEach((size, idx) => {
+			const bestModel = sizedModels
+			  .filter((m) => Math.round(m["size"]) === size)
+			  .sort((a, b) => b["metrics"][score] - a["metrics"][score])[0];
+			if (bestModel) {
+			  let point = chartOption.series[0].data.find((p) => p.name === bestModel["Model"]);
+			  if (!point) {
+				point = chartOption.series[1].data.find((p) => p.name === bestModel["Model"]);
+			  }
+			  point.itemStyle = { opacity: 1.0 };
+			  point.label = {
+				show: true,
+				position: "top",
+				offset: offsets[idx],
+				formatter: (params) => params.data.name,
+				color: "inherit",
+			  };
+			}
+		  });
+
+		  chart.setOption(chartOption);
+
+		  chart.on('legendselectchanged', function (params) {
+			const selected = params.selected;
+			const visibleSeries = [];
+
+			// 1. 현재 선택된 시리즈만 필터링해서 데이터 추출
+			chartOption.series.forEach((series) => {
+				if (selected[series.name]) {
+				visibleSeries.push(...series.data.map((d) => ({
+					x: d.value[0],
+					y: d.value[1]
+				})));
+				}
+			});
+
+			if (visibleSeries.length === 0) return;
+
+			// 2. 축 값 계산
+			const xVals = visibleSeries.map(p => p.x);
+			const yVals = visibleSeries.map(p => p.y);
+
+			const xMin = Math.min(...xVals);
+			const xMax = Math.max(...xVals);
+			const yMin = Math.min(...yVals);
+			const yMax = Math.max(...yVals);
+
+			// 3. 버퍼 비율 설정 (x는 5%, y는 5%)
+			const xRange = xMax - xMin;
+			const yRange = yMax - yMin;
+
+			const xBuffer = xRange * 0.05 || 10;
+			const yBuffer = yRange * 0.05 || 1.0;
+
+			// 4. 축 업데이트
+			chart.setOption({
+				xAxis: {
+				min: Math.floor(xMin - xBuffer),
+				max: Math.ceil(xMax + xBuffer)
+				},
+				yAxis: {
+				min: Math.floor(yMin - yBuffer),
+				max: Math.ceil(yMax + yBuffer)
+				}
+			});
+			});
+
+		};
+
+
+	  const cifar100Radio = document.getElementById("CIFAR100");
+	  const tinyimagenetRadio = document.getElementById("TinyImageNet");
+	  const imagenetRadio = document.getElementById("ImageNet");
+	  const cub200Radio = document.getElementById("CUB200");
+	  const mit67Radio = document.getElementById("MIT67");
+
+	  cifar100Radio.addEventListener("click", function () {
+		clearTable();
+		displayTable(plusedTable, "CIFAR100");
+		displayTable(originTable, "FLOPs");
+		clearChart();
+		displayChart("CIFAR100");
+	  });
+
+	  tinyimagenetRadio.addEventListener("click", function () {
+		clearTable();
+		displayTable(plusedTable, "TinyImageNet");
+		displayTable(originTable, "FLOPs");
+		clearChart();
+		displayChart("TinyImageNet");
+	  });
+	  
+	  imagenetRadio.addEventListener("click", function () {
+		clearTable();
+		displayTable(plusedTable, "ImageNet");
+		displayTable(originTable, "FLOPs");
+		clearChart();
+		displayChart("ImageNet");
+	  });
+	  
+	  cub200Radio.addEventListener("click", function () {
+		clearTable();
+		displayTable(plusedTable, "CUB200");
+		displayTable(originTable, "FLOPs");
+		clearChart();
+		displayChart("CUB200");
+	  });
+
+	  mit67Radio.addEventListener("click", function () {
+		clearTable();
+		displayTable(plusedTable, "MIT67");
+		displayTable(originTable, "FLOPs");
+		clearChart();
+		displayChart("MIT67");
+	  });
+
+
+	  // 초기 로딩 시 한 번만 실행
+	  displayTable(plusedTable, "CIFAR100");
+	  displayTable(originTable, "FLOPs");
+	  displayChart("CIFAR100");
+
+	  window.addEventListener("resize", () => {
+		chart.resize();
+	  });
+	  
+		document.getElementById("topAccuracyOnly").addEventListener("change", () => {
+		  const currentScore = document.querySelector('input[name="btnradio"]:checked').id;
+		  clearTable();
+		  displayTable(plusedTable, currentScore);
+		  displayTable(originTable, "FLOPs");
+		//   clearChart();
+		//   displayChart(currentScore);
+		});
+		
+		["onlyBaseline", "onlyKD"].forEach((id) => {
+		document.getElementById(id).addEventListener("change", () => {
+			const currentScore = document.querySelector('input[name="btnradio"]:checked').id;
+			clearTable();
+			displayTable(plusedTable, currentScore);
+			displayTable(originTable, "FLOPs");
+			// clearChart();
+			// displayChart(currentScore);
+		  });
+		});
+	</script>
+
+</body>
+
+</html>
