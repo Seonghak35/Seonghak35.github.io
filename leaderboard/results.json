@@ -4,7 +4,7 @@
       "CIFAR100": 74.31,
 	    "TinyImageNet": 60.97
     },
-    "size": 520,
+    "size": 1.74,
     "type": "baseline"
   },
   "resnet32x4": {
@@ -12,7 +12,7 @@
       "CIFAR100": 79.42,
 	    "TinyImageNet": 64.41
     },
-    "size":  1088,
+    "size":  7.43,
     "type": "baseline"
   },
   "WRN-40-2": {
@@ -20,7 +20,7 @@
       "CIFAR100": 75.61,
 	    "TinyImageNet": 61.28
     },
-    "size": 330,
+    "size": 2.26,
     "type": "baseline"
   },
   "VGG13": {
@@ -28,7 +28,7 @@
       "CIFAR100": 74.64,
 	    "TinyImageNet": 62.59
     },
-    "size": 286,
+    "size": 9.46,
     "type": "baseline"
   },
   "ResNet50": {
@@ -37,7 +37,7 @@
 	    "TinyImageNet": 68.20,
       "ImageNet": 76.16
     },
-    "size": 1312,
+    "size": 23.71,
     "type": "baseline"
   },
   "ResNet34": {
@@ -48,7 +48,7 @@
       "Stanford40": 49.06,
       "Dogs": 69.28
     },
-    "size": 1150,
+    "size": 21.33,
     "type": "baseline"
   },
 
@@ -58,7 +58,7 @@
       "CIFAR100": 71.14,
 	    "TinyImageNet": 55.78
     },
-    "size": 90,
+    "size": 0.47,
     "type": "baseline"
   },
   "resnet8x4": {
@@ -66,7 +66,7 @@
       "CIFAR100": 72.50,
 	    "TinyImageNet": 55.41
     },
-    "size": 179,
+    "size": 1.23,
     "type": "baseline"
   },  
   "WRN-16-2": {
@@ -74,7 +74,7 @@
       "CIFAR100": 73.26,
 	    "TinyImageNet": 58.23
     },
-    "size": 102,
+    "size": 0.70,
     "type": "baseline"
   },  
   "WRN-40-1": {
@@ -82,7 +82,7 @@
       "CIFAR100": 71.98,
 	    "TinyImageNet": 56.78
     },
-    "size": 131,
+    "size": 0.57,
     "type": "baseline"
   },  
   "VGG8": {
@@ -90,7 +90,7 @@
       "CIFAR100": 70.36,
 	    "TinyImageNet": 56.67
     },
-    "size": 97,
+    "size": 3.96,
     "type": "baseline"
   },  
   "ShuffleNet-V1": {
@@ -98,7 +98,7 @@
       "CIFAR100": 70.50,
 	    "TinyImageNet": 58.20
     },
-    "size": 42,
+    "size": 0.95,
     "type": "baseline"
   },  
   "MobileNet-V2": {
@@ -107,7 +107,7 @@
 	    "TinyImageNet": 58.20,
       "ImageNet": 68.87
     },
-    "size": 7,
+    "size": 0.81,
     "type": "baseline"
   }, 
   "ShuffleNet-V2": {
@@ -115,7 +115,7 @@
       "CIFAR100": 71.82,
 	    "TinyImageNet": 62.07
     },
-    "size": 47,
+    "size": 1.36,
     "type": "baseline"
   },
   "ResNet18": {
@@ -126,7 +126,7 @@
       "Stanford40": 45.94,
       "Dogs": 66.97
     },
-    "size": 557,
+    "size": 11.22,
     "type": "baseline"
   },
 
@@ -139,7 +139,7 @@
       "Stanford40": 49.42,
       "Dogs": 68.28
     },
-    "size": 557,
+    "size": 11.22,
     "type": "kd"
   },
   "ResNet18 (FitNet, ResNet34)": {
@@ -149,7 +149,7 @@
       "Stanford40": 46.89,
       "Dogs": 67.06
     },
-    "size": 557,
+    "size": 11.22,
     "type": "kd"
   },
   "ResNet18 (ReviewKD, ResNet34)": {
@@ -160,21 +160,21 @@
       "Stanford40": 49.95,
       "Dogs": 68.96
     },
-    "size": 557,
+    "size": 11.22,
     "type": "kd"
   },
   "ResNet18 (DiffKD, ResNet34)": {
     "metrics": {
       "ImageNet": 72.22
     },
-    "size": 557,
+    "size": 11.22,
     "type": "kd"
   },
   "ResNet18 (CAT-KD, ResNet34)": {
     "metrics": {
       "ImageNet": 71.26
     },
-    "size": 557,
+    "size": 11.22,
     "type": "kd"
   },
   "ResNet18 (DKD, ResNet34)": {
@@ -185,7 +185,7 @@
       "Stanford40": 49.84,
       "Dogs": 69.04
     },
-    "size": 557,
+    "size": 11.22,
     "type": "kd"
   },
   "ResNet18 (MLKD, ResNet34)": {
@@ -196,14 +196,14 @@
       "Stanford40": 52.86,
       "Dogs": 71.81
     },
-    "size": 557,
+    "size": 11.22,
     "type": "kd"
   },
   "ResNet18 (EnergyDKD, ResNet34)": {
     "metrics": {
       "ImageNet": 72.21
     },
-    "size": 557,
+    "size": 11.22,
     "type": "kd"
   },
   "ResNet18 (R2KD, ResNet34)": {
@@ -214,7 +214,7 @@
       "Stanford40": 50.49,
       "Dogs": 69.75
     },
-    "size": 557,
+    "size": 11.22,
     "type": "kd"
   },
   "ResNet18 (R2KD w/ MixUp, ResNet34)": {
@@ -224,7 +224,7 @@
       "Stanford40": 51.58,
       "Dogs": 70.30
     },
-    "size": 557,
+    "size": 11.22,
     "type": "kd"
   },
   "ResNet18 (R2KD w/ CutMix, ResNet34)": {
@@ -234,7 +234,7 @@
       "Stanford40": 51.90,
       "Dogs": 70.94
     },
-    "size": 557,
+    "size": 11.22,
     "type": "kd"
   },
   "ResNet18 (FiGKD, ResNet34)": {
@@ -244,7 +244,7 @@
       "Stanford40": 53.69,
       "Dogs": 72.79
     },
-    "size": 557,
+    "size": 11.22,
     "type": "kd"
   },
 
@@ -254,7 +254,7 @@
       "CIFAR100": 73.08,
 	    "TinyImageNet": 57.64
     },
-    "size": 90,
+    "size": 0.47,
     "type": "kd"
   },
   "resnet32 (FitNet, resnet110)": {
@@ -262,7 +262,7 @@
       "CIFAR100": 71.06,
 	    "TinyImageNet": 55.01
     },
-    "size": 90,
+    "size": 0.47,
     "type": "kd"
   },
   "resnet32 (ReviewKD, resnet110)": {
@@ -270,7 +270,7 @@
       "CIFAR100": 73.89,
 	    "TinyImageNet": 59.24
     },
-    "size": 90,
+    "size": 0.47,
     "type": "kd"
   },
   "resnet32 (CAT-KD, resnet110)": {
@@ -278,7 +278,7 @@
       "CIFAR100": 73.62,
 	    "TinyImageNet": 58.58
     },
-    "size": 90,
+    "size": 0.47,
     "type": "kd"
   },
   "resnet32 (DKD, resnet110)": {
@@ -286,7 +286,7 @@
       "CIFAR100": 74.11,
 	    "TinyImageNet": 59.31
     },
-    "size": 90,
+    "size": 0.47,
     "type": "kd"
   },
   "resnet32 (MLKD, resnet110)": {
@@ -294,49 +294,49 @@
       "CIFAR100": 74.11,
 	    "TinyImageNet": 58.30
     },
-    "size": 90,
+    "size": 0.47,
     "type": "kd"
   },
   "resnet32 (EnergyKD, resnet110)": {
     "metrics": {
       "CIFAR100": 73.68
     },
-    "size": 90,
+    "size": 0.47,
     "type": "kd"
   },
   "resnet32 (EnergyDKD, resnet110)": {
     "metrics": {
       "CIFAR100": 74.11
     },
-    "size": 90,
+    "size": 0.47,
     "type": "kd"
   },
   "resnet32 (EnergyMLKD, resnet110)": {
     "metrics": {
       "CIFAR100": 74.60
     },
-    "size": 90,
+    "size": 0.47,
     "type": "kd"
   },
   "resnet32 (R2KD, resnet110)": {
     "metrics": {
       "CIFAR100": 74.09
     },
-    "size": 90,
+    "size": 0.47,
     "type": "kd"
   },
   "resnet32 (R2KD w/ MixUp, resnet110)": {
     "metrics": {
       "CIFAR100": 74.66
     },
-    "size": 90,
+    "size": 0.47,
     "type": "kd"
   },
   "resnet32 (R2KD w/ CutMix, resnet110)": {
     "metrics": {
       "CIFAR100": 75.04
     },
-    "size": 90,
+    "size": 0.47,
     "type": "kd"
   },
   "resnet32 (FiGKD, resnet110)": {
@@ -344,7 +344,7 @@
       "CIFAR100": 74.31,
 	    "TinyImageNet": 59.73
     },
-    "size": 90,
+    "size": 0.47,
     "type": "kd"
   },
 
@@ -354,7 +354,7 @@
       "CIFAR100": 73.33,
 	    "TinyImageNet": 55.41
     },
-    "size": 179,
+    "size": 1.23,
     "type": "kd"
   },
   "resnet8x4 (FitNet, resnet32x4)": {
@@ -362,7 +362,7 @@
       "CIFAR100": 73.50,
 	    "TinyImageNet": 55.39
     },
-    "size": 179,
+    "size": 1.23,
     "type": "kd"
   },
   "resnet8x4 (ReviewKD, resnet32x4)": {
@@ -370,14 +370,14 @@
       "CIFAR100": 75.63,
 	    "TinyImageNet": 59.01
     },
-    "size": 179,
+    "size": 1.23,
     "type": "kd"
   },
   "resnet8x4 (DiffKD, resnet32x4)": {
     "metrics": {
       "CIFAR100": 76.72
     },
-    "size": 179,
+    "size": 1.23,
     "type": "kd"
   },
   "resnet8x4 (CAT-KD, resnet32x4)": {
@@ -385,7 +385,7 @@
       "CIFAR100": 76.91,
 	    "TinyImageNet": 59.11
     },
-    "size": 179,
+    "size": 1.23,
     "type": "kd"
   },
   "resnet8x4 (DKD, resnet32x4)": {
@@ -393,7 +393,7 @@
       "CIFAR100": 76.32,
 	    "TinyImageNet": 55.67
     },
-    "size": 179,
+    "size": 1.23,
     "type": "kd"
   },
   "resnet8x4 (MLKD, resnet32x4)": {
@@ -401,49 +401,49 @@
       "CIFAR100": 77.08,
 	    "TinyImageNet": 60.67
     },
-    "size": 179,
+    "size": 1.23,
     "type": "kd"
   },
   "resnet8x4 (EnergyKD, resnet32x4)": {
     "metrics": {
       "CIFAR100": 74.60
     },
-    "size": 179,
+    "size": 1.23,
     "type": "kd"
   },
   "resnet8x4 (EnergyDKD, resnet32x4)": {
     "metrics": {
       "CIFAR100": 76.78
     },
-    "size": 179,
+    "size": 1.23,
     "type": "kd"
   },
   "resnet8x4 (EnergyMLKD, resnet32x4)": {
     "metrics": {
       "CIFAR100": 77.31
     },
-    "size": 179,
+    "size": 1.23,
     "type": "kd"
   },
   "resnet8x4 (R2KD, resnet32x4)": {
     "metrics": {
       "CIFAR100": 77.01
     },
-    "size": 179,
+    "size": 1.23,
     "type": "kd"
   },
   "resnet8x4 (R2KD w/ CutOut, resnet32x4)": {
     "metrics": {
       "TinyImageNet": 60.48
     },
-    "size": 179,
+    "size": 1.23,
     "type": "kd"
   },
   "resnet8x4 (R2KD w/ AutoAugment, resnet32x4)": {
     "metrics": {
       "TinyImageNet": 60.79
     },
-    "size": 179,
+    "size": 1.23,
     "type": "kd"
   },
   "resnet8x4 (R2KD w/ MixUp, resnet32x4)": {
@@ -451,7 +451,7 @@
       "CIFAR100": 78.07,
       "TinyImageNet": 60.16
     },
-    "size": 179,
+    "size": 1.23,
     "type": "kd"
   },
   "resnet8x4 (R2KD w/ CutMix, resnet32x4)": {
@@ -459,7 +459,7 @@
       "CIFAR100": 77.70,
       "TinyImageNet": 60.56
     },
-    "size": 179,
+    "size": 1.23,
     "type": "kd"
   },
   "resnet8x4 (R2KD w/ CutMixPick, resnet32x4)": {
@@ -467,7 +467,7 @@
       "CIFAR100": 77.52,
       "TinyImageNet": 60.75
     },
-    "size": 179,
+    "size": 1.23,
     "type": "kd"
   },
   "resnet8x4 (FiGKD, resnet32x4)": {
@@ -475,7 +475,7 @@
       "CIFAR100": 78.05,
 	    "TinyImageNet": 60.92
     },
-    "size": 179,
+    "size": 1.23,
     "type": "kd"
   },
 
@@ -485,7 +485,7 @@
       "CIFAR100": 74.92,
 	    "TinyImageNet": 58.23
     },
-    "size": 102,
+    "size": 0.70,
     "type": "kd"
   }, 
   "WRN-16-2 (FitNet, WRN-40-2)": {
@@ -493,7 +493,7 @@
       "CIFAR100": 73.58,
 	    "TinyImageNet": 58.30
     },
-    "size": 102,
+    "size": 0.70,
     "type": "kd"
   }, 
   "WRN-16-2 (ReviewKD, WRN-40-2)": {
@@ -501,7 +501,7 @@
       "CIFAR100": 76.12,
 	    "TinyImageNet": 60.55
     },
-    "size": 102,
+    "size": 0.70,
     "type": "kd"
   }, 
   "WRN-16-2 (CAT-KD, WRN-40-2)": {
@@ -509,7 +509,7 @@
       "CIFAR100": 75.60,
 	    "TinyImageNet": 59.60
     },
-    "size": 102,
+    "size": 0.70,
     "type": "kd"
   }, 
   "WRN-16-2 (DKD, WRN-40-2)": {
@@ -517,7 +517,7 @@
       "CIFAR100": 76.24,
 	    "TinyImageNet": 58.65
     },
-    "size": 102,
+    "size": 0.70,
     "type": "kd"
   },
   "WRN-16-2 (MLKD, WRN-40-2)": {
@@ -525,49 +525,49 @@
       "CIFAR100": 76.63,
 	    "TinyImageNet": 60.80
     },
-    "size": 102,
+    "size": 0.70,
     "type": "kd"
   },
   "WRN-16-2 (EnergyKD, WRN-40-2)": {
     "metrics": {
       "CIFAR100": 75.45
     },
-    "size": 102,
+    "size": 0.70,
     "type": "kd"
   },
   "WRN-16-2 (EnergyDKD, WRN-40-2)": {
     "metrics": {
       "CIFAR100": 76.66
     },
-    "size": 102,
+    "size": 0.70,
     "type": "kd"
   },
   "WRN-16-2 (EnergyMLKD, WRN-40-2)": {
     "metrics": {
       "CIFAR100": 77.19
     },
-    "size": 102,
+    "size": 0.70,
     "type": "kd"
   },
   "WRN-16-2 (R2KD, WRN-40-2)": {
     "metrics": {
       "CIFAR100": 76.62
     },
-    "size": 102,
+    "size": 0.70,
     "type": "kd"
   },
   "WRN-16-2 (R2KD w/ CutOut, WRN-40-2)": {
     "metrics": {
       "TinyImageNet": 60.87
     },
-    "size": 102,
+    "size": 0.70,
     "type": "kd"
   },
   "WRN-16-2 (R2KD w/ AutoAugment, WRN-40-2)": {
     "metrics": {
       "TinyImageNet": 60.84
     },
-    "size": 102,
+    "size": 0.70,
     "type": "kd"
   },
   "WRN-16-2 (R2KD w/ MixUp, WRN-40-2)": {
@@ -575,7 +575,7 @@
       "CIFAR100": 76.94,
       "TinyImageNet": 61.15
     },
-    "size": 102,
+    "size": 0.70,
     "type": "kd"
   },
   "WRN-16-2 (R2KD w/ CutMix, WRN-40-2)": {
@@ -583,7 +583,7 @@
       "CIFAR100": 77.06,
       "TinyImageNet": 61.32
     },
-    "size": 102,
+    "size": 0.70,
     "type": "kd"
   },
   "WRN-16-2 (R2KD w/ CutMixPick, WRN-40-2)": {
@@ -591,7 +591,7 @@
       "CIFAR100": 76.72,
       "TinyImageNet": 61.24
     },
-    "size": 102,
+    "size": 0.70,
     "type": "kd"
   },
   "WRN-16-2 (FiGKD, WRN-40-2)": {
@@ -599,7 +599,7 @@
       "CIFAR100": 77.06,
 	    "TinyImageNet": 61.91
     },
-    "size": 102,
+    "size": 0.70,
     "type": "kd"
   },
 
@@ -609,7 +609,7 @@
       "CIFAR100": 73.54,
 	    "TinyImageNet": 58.25
     },
-    "size": 131,
+    "size": 0.57,
     "type": "kd"
   },  
   "WRN-40-1 (FitNet, WRN-40-2)": {
@@ -617,7 +617,7 @@
       "CIFAR100": 73.50,
 	    "TinyImageNet": 56.99
     },
-    "size": 131,
+    "size": 0.57,
     "type": "kd"
   },  
   "WRN-40-1 (ReviewKD, WRN-40-2)": {
@@ -625,14 +625,14 @@
       "CIFAR100": 75.09,
 	    "TinyImageNet": 60.27
     },
-    "size": 131,
+    "size": 0.57,
     "type": "kd"
   },  
   "WRN-40-1 (DiffKD, WRN-40-2)": {
     "metrics": {
       "CIFAR100": 74.09
     },
-    "size": 131,
+    "size": 0.57,
     "type": "kd"
   },  
   "WRN-40-1 (CAT-KD, WRN-40-2)": {
@@ -640,7 +640,7 @@
       "CIFAR100": 74.82,
 	    "TinyImageNet": 59.67
     },
-    "size": 131,
+    "size": 0.57,
     "type": "kd"
   },  
   "WRN-40-1 (DKD, WRN-40-2)": {
@@ -648,7 +648,7 @@
       "CIFAR100": 74.81,
 	    "TinyImageNet": 58.94
     },
-    "size": 131,
+    "size": 0.57,
     "type": "kd"
   },  
   "WRN-40-1 (MLKD, WRN-40-2)": {
@@ -656,49 +656,49 @@
       "CIFAR100": 75.35,
 	    "TinyImageNet": 59.91
     },
-    "size": 131,
+    "size": 0.57,
     "type": "kd"
   },  
   "WRN-40-1 (EnergyKD, WRN-40-2)": {
     "metrics": {
       "CIFAR100": 74.28
     },
-    "size": 131,
+    "size": 0.57,
     "type": "kd"
   },
   "WRN-40-1 (EnergyDKD, WRN-40-2)": {
     "metrics": {
       "CIFAR100": 74.97
     },
-    "size": 131,
+    "size": 0.57,
     "type": "kd"
   },
   "WRN-40-1 (EnergyMLKD, WRN-40-2)": {
     "metrics": {
       "CIFAR100": 75.70
     },
-    "size": 131,
+    "size": 0.57,
     "type": "kd"
   },
   "WRN-40-1 (R2KD, WRN-40-2)": {
     "metrics": {
       "CIFAR100": 75.24
     },
-    "size": 131,
+    "size": 0.57,
     "type": "kd"
   },
   "WRN-40-1 (R2KD w/ MixUp, WRN-40-2)": {
     "metrics": {
       "CIFAR100": 76.02
     },
-    "size": 131,
+    "size": 0.57,
     "type": "kd"
   },
   "WRN-40-1 (R2KD w/ CutMix, WRN-40-2)": {
     "metrics": {
       "CIFAR100": 76.21
     },
-    "size": 131,
+    "size": 0.57,
     "type": "kd"
   },
   "WRN-40-1 (FiGKD, WRN-40-2)": {
@@ -706,7 +706,7 @@
       "CIFAR100": 76.04,
 	    "TinyImageNet": 60.69
     },
-    "size": 131,
+    "size": 0.57,
     "type": "kd"
   },
 
@@ -716,7 +716,7 @@
       "CIFAR100": 72.98,
 	    "TinyImageNet": 56.67
     },
-    "size": 97,
+    "size": 3.96,
     "type": "kd"
   }, 
   "VGG8 (FitNet, VGG13)": {
@@ -724,7 +724,7 @@
       "CIFAR100": 71.02,
 	    "TinyImageNet": 58.04
     },
-    "size": 97,
+    "size": 3.96,
     "type": "kd"
   }, 
   "VGG8 (ReviewKD, VGG13)": {
@@ -732,7 +732,7 @@
       "CIFAR100": 74.84,
 	    "TinyImageNet": 62.03
     },
-    "size": 97,
+    "size": 3.96,
     "type": "kd"
   }, 
   "VGG8 (CAT-KD, VGG13)": {
@@ -740,7 +740,7 @@
       "CIFAR100": 74.65,
 	    "TinyImageNet": 62.66
     },
-    "size": 97,
+    "size": 3.96,
     "type": "kd"
   }, 
   "VGG8 (DKD, VGG13)": {
@@ -748,7 +748,7 @@
       "CIFAR100": 74.68,
 	    "TinyImageNet": 61.48
     },
-    "size": 97,
+    "size": 3.96,
     "type": "kd"
   }, 
   "VGG8 (MLKD, VGG13)": {
@@ -756,49 +756,49 @@
       "CIFAR100": 75.18,
 	    "TinyImageNet": 63.76
     },
-    "size": 97,
+    "size": 3.96,
     "type": "kd"
   }, 
   "VGG8 (EnergyKD, VGG13)": {
     "metrics": {
       "CIFAR100": 73.73
     },
-    "size": 97,
+    "size": 3.96,
     "type": "kd"
   },
   "VGG8 (EnergyDKD, VGG13)": {
     "metrics": {
       "CIFAR100": 74.90
     },
-    "size": 97,
+    "size": 3.96,
     "type": "kd"
   },
   "VGG8 (EnergyMLKD, VGG13)": {
     "metrics": {
       "CIFAR100": 75.56
     },
-    "size": 97,
+    "size": 3.96,
     "type": "kd"
   },
   "VGG8 (R2KD, VGG13)": {
     "metrics": {
       "CIFAR100": 75.26
     },
-    "size": 97,
+    "size": 3.96,
     "type": "kd"
   },
   "VGG8 (R2KD w/ CutOut, VGG13)": {
     "metrics": {
       "TinyImageNet": 64.13
     },
-    "size": 97,
+    "size": 3.96,
     "type": "kd"
   },
   "VGG8 (R2KD w/ AutoAugment, VGG13)": {
     "metrics": {
       "TinyImageNet": 63.90
     },
-    "size": 97,
+    "size": 3.96,
     "type": "kd"
   },
   "VGG8 (R2KD w/ MixUp, VGG13)": {
@@ -806,7 +806,7 @@
       "CIFAR100": 75.65,
       "TinyImageNet": 63.39
     },
-    "size": 97,
+    "size": 3.96,
     "type": "kd"
   },
   "VGG8 (R2KD w/ CutMix, VGG13)": {
@@ -814,7 +814,7 @@
       "CIFAR100": 76.40,
       "TinyImageNet": 64.69
     },
-    "size": 97,
+    "size": 3.96,
     "type": "kd"
   },
   "VGG8 (R2KD w/ CutMixPick, VGG13)": {
@@ -822,7 +822,7 @@
       "CIFAR100": 75.54,
       "TinyImageNet": 64.72
     },
-    "size": 97,
+    "size": 3.96,
     "type": "kd"
   },
   "VGG8 (FiGKD, VGG13)": {
@@ -830,7 +830,7 @@
       "CIFAR100": 76.17,
 	    "TinyImageNet": 64.52
     },
-    "size": 97,
+    "size": 3.96,
     "type": "kd"
   },
 
@@ -840,7 +840,7 @@
       "CIFAR100": 74.83,
 	    "TinyImageNet": 61.10
     },
-    "size": 42,
+    "size": 0.95,
     "type": "kd"
   },
   "ShuffleNet-V1 (KD, resnet32x4)": {
@@ -848,7 +848,7 @@
       "CIFAR100": 74.07,
 	    "TinyImageNet": 61.73
     },
-    "size": 42,
+    "size": 0.95,
     "type": "kd"
   },
   "ShuffleNet-V1 (FitNet, WRN-40-2)": {
@@ -856,7 +856,7 @@
       "CIFAR100": 73.73,
 	    "TinyImageNet": 57.33
     },
-    "size": 42,
+    "size": 0.95,
     "type": "kd"
   },
   "ShuffleNet-V1 (FitNet, resnet32x4)": {
@@ -864,7 +864,7 @@
       "CIFAR100": 73.59,
 	    "TinyImageNet": 57.74
     },
-    "size": 42,
+    "size": 0.95,
     "type": "kd"
   },
   "ShuffleNet-V1 (ReivewKD, WRN-40-2)": {
@@ -872,7 +872,7 @@
       "CIFAR100": 77.14,
 	    "TinyImageNet": 63.29
     },
-    "size": 42,
+    "size": 0.95,
     "type": "kd"
   },
   "ShuffleNet-V1 (ReivewKD, resnet32x4)": {
@@ -880,7 +880,7 @@
       "CIFAR100": 77.45,
 	    "TinyImageNet": 64.47
     },
-    "size": 42,
+    "size": 0.95,
     "type": "kd"
   },
   "ShuffleNet-V1 (CAT-KD, WRN-40-2)": {
@@ -888,14 +888,14 @@
       "CIFAR100": 77.35,
 	    "TinyImageNet": 61.43
     },
-    "size": 42,
+    "size": 0.95,
     "type": "kd"
   },
   "ShuffleNet-V1 (CAT-KD, resnet32x4)": {
     "metrics": {
       "CIFAR100": 78.26
     },
-    "size": 42,
+    "size": 0.95,
     "type": "kd"
   },
   "ShuffleNet-V1 (DKD, WRN-40-2)": {
@@ -903,7 +903,7 @@
       "CIFAR100": 76.70,
 	    "TinyImageNet": 61.64
     },
-    "size": 42,
+    "size": 0.95,
     "type": "kd"
   },
   "ShuffleNet-V1 (DKD, resnet32x4)": {
@@ -911,7 +911,7 @@
       "CIFAR100": 76.45,
 	    "TinyImageNet": 62.58
     },
-    "size": 42,
+    "size": 0.95,
     "type": "kd"
   },
   "ShuffleNet-V1 (MLKD, WRN-40-2)": {
@@ -919,7 +919,7 @@
       "CIFAR100": 77.44,
 	    "TinyImageNet": 62.85
     },
-    "size": 42,
+    "size": 0.95,
     "type": "kd"
   },
   "ShuffleNet-V1 (MLKD, resnet32x4)": {
@@ -927,91 +927,91 @@
       "CIFAR100": 77.18,
 	    "TinyImageNet": 63.80
     },
-    "size": 42,
+    "size": 0.95,
     "type": "kd"
   },
   "ShuffleNet-V1 (EnergyKD, WRN-40-2)": {
     "metrics": {
       "CIFAR100": 75.90
     },
-    "size": 42,
+    "size": 0.95,
     "type": "kd"
   },
   "ShuffleNet-V1 (EnergyKD, resnet32x4)": {
     "metrics": {
       "CIFAR100": 75.20
     },
-    "size": 42,
+    "size": 0.95,
     "type": "kd"
   },
   "ShuffleNet-V1 (EnergyDKD, WRN-40-2)": {
     "metrics": {
       "CIFAR100": 77.06
     },
-    "size": 42,
+    "size": 0.95,
     "type": "kd"
   },
   "ShuffleNet-V1 (EnergyDKD, resnet32x4)": {
     "metrics": {
       "CIFAR100": 76.89
     },
-    "size": 42,
+    "size": 0.95,
     "type": "kd"
   },
   "ShuffleNet-V1 (EnergyMLKD, WRN-40-2)": {
     "metrics": {
       "CIFAR100": 77.76
     },
-    "size": 42,
+    "size": 0.95,
     "type": "kd"
   },
   "ShuffleNet-V1 (EnergyMLKD, resnet32x4)": {
     "metrics": {
       "CIFAR100": 77.82
     },
-    "size": 42,
+    "size": 0.95,
     "type": "kd"
   },
   "ShuffleNet-V1 (R2KD, WRN-40-2)": {
     "metrics": {
       "CIFAR100": 77.63
     },
-    "size": 42,
+    "size": 0.95,
     "type": "kd"
   },
   "ShuffleNet-V1 (R2KD, resnet32x4)": {
     "metrics": {
       "CIFAR100": 77.58
     },
-    "size": 42,
+    "size": 0.95,
     "type": "kd"
   },
   "ShuffleNet-V1 (R2KD w/ MixUp, WRN-40-2)": {
     "metrics": {
       "CIFAR100": 77.87
     },
-    "size": 42,
+    "size": 0.95,
     "type": "kd"
   },
   "ShuffleNet-V1 (R2KD w/ MixUp, resnet32x4)": {
     "metrics": {
       "CIFAR100": 78.60
     },
-    "size": 42,
+    "size": 0.95,
     "type": "kd"
   },
   "ShuffleNet-V1 (R2KD w/ CutMix, WRN-40-2)": {
     "metrics": {
       "CIFAR100": 78.00
     },
-    "size": 42,
+    "size": 0.95,
     "type": "kd"
   },
   "ShuffleNet-V1 (R2KD w/ CutMix, resnet32x4)": {
     "metrics": {
       "CIFAR100": 78.20
     },
-    "size": 42,
+    "size": 0.95,
     "type": "kd"
   },
   "ShuffleNet-V1 (FiGKD, WRN-40-2)": {
@@ -1019,7 +1019,7 @@
       "CIFAR100": 78.84,
 	    "TinyImageNet": 64.95
     },
-    "size": 42,
+    "size": 0.95,
     "type": "kd"
   },
   "ShuffleNet-V1 (FiGKD, resnet32x4)": {
@@ -1027,7 +1027,7 @@
       "CIFAR100": 78.70,
 	    "TinyImageNet": 65.84
     },
-    "size": 42,
+    "size": 0.95,
     "type": "kd"
   },
 
@@ -1038,7 +1038,7 @@
 	    "TinyImageNet": 58.79,
       "ImageNet": 68.58
     },
-    "size": 7,
+    "size": 0.81,
     "type": "kd"
   }, 
   "MobileNet-V2 (KD, VGG13)": {
@@ -1046,7 +1046,7 @@
       "CIFAR100": 67.37,
 	    "TinyImageNet": 58.20
     },
-    "size": 7,
+    "size": 0.81,
     "type": "kd"
   }, 
   "MobileNet-V2 (FitNet, ResNet50)": {
@@ -1054,7 +1054,7 @@
       "CIFAR100": 63.16,
 	    "TinyImageNet": 57.54
     },
-    "size": 7,
+    "size": 0.81,
     "type": "kd"
   }, 
   "MobileNet-V2 (FitNet, VGG13)": {
@@ -1062,7 +1062,7 @@
       "CIFAR100": 64.14,
 	    "TinyImageNet": 57.90
     },
-    "size": 7,
+    "size": 0.81,
     "type": "kd"
   },
   "MobileNet-V2 (ReviewKD, ResNet50)": {
@@ -1071,7 +1071,7 @@
 	    "TinyImageNet": 59.35,
       "ImageNet": 72.56
     },
-    "size": 7,
+    "size": 0.81,
     "type": "kd"
   }, 
   "MobileNet-V2 (ReviewKD, VGG13)": {
@@ -1079,7 +1079,7 @@
       "CIFAR100": 70.37,
 	    "TinyImageNet": 62.06
     },
-    "size": 7,
+    "size": 0.81,
     "type": "kd"
   },
   "MobileNet-V2 (DiffKD, ResNet50)": {
@@ -1087,7 +1087,7 @@
       "CIFAR100": 69.21,
       "ImageNet": 73.62
     },
-    "size": 7,
+    "size": 0.81,
     "type": "kd"
   }, 
   "MobileNet-V2 (CAT-KD, ResNet50)": {
@@ -1096,7 +1096,7 @@
 	    "TinyImageNet": 58.57,
       "ImageNet": 72.24
     },
-    "size": 7,
+    "size": 0.81,
     "type": "kd"
   }, 
   "MobileNet-V2 (CAT-KD, VGG13)": {
@@ -1104,7 +1104,7 @@
       "CIFAR100": 69.13,
 	    "TinyImageNet": 57.42
     },
-    "size": 7,
+    "size": 0.81,
     "type": "kd"
   },
   "MobileNet-V2 (DKD, ResNet50)": {
@@ -1113,7 +1113,7 @@
 	    "TinyImageNet": 61.42,
       "ImageNet": 72.05
     },
-    "size": 7,
+    "size": 0.81,
     "type": "kd"
   }, 
   "MobileNet-V2 (DKD, VGG13)": {
@@ -1121,7 +1121,7 @@
       "CIFAR100": 69.71,
 	    "TinyImageNet": 59.28
     },
-    "size": 7,
+    "size": 0.81,
     "type": "kd"
   }, 
   "MobileNet-V2 (MLKD, ResNet50)": {
@@ -1130,7 +1130,7 @@
 	    "TinyImageNet": 62.42,
       "ImageNet": 73.01
     },
-    "size": 7,
+    "size": 0.81,
     "type": "kd"
   }, 
   "MobileNet-V2 (MLKD, VGG13)": {
@@ -1138,21 +1138,21 @@
       "CIFAR100": 70.57,
 	    "TinyImageNet": 63.16
     },
-    "size": 7,
+    "size": 0.81,
     "type": "kd"
   }, 
   "MobileNet-V2 (EnergyKD, ResNet50)": {
     "metrics": {
       "CIFAR100": 68.97
     },
-    "size": 7,
+    "size": 0.81,
     "type": "kd"
   }, 
   "MobileNet-V2 (EnergyKD, VGG13)": {
     "metrics": {
       "CIFAR100": 68.65
     },
-    "size": 7,
+    "size": 0.81,
     "type": "kd"
   },
   "MobileNet-V2 (EnergyDKD, ResNet50)": {
@@ -1160,28 +1160,28 @@
       "CIFAR100": 70.77,
       "ImageNet": 72.98
     },
-    "size": 7,
+    "size": 0.81,
     "type": "kd"
   }, 
   "MobileNet-V2 (EnergyDKD, VGG13)": {
     "metrics": {
       "CIFAR100": 77.19
     },
-    "size": 7,
+    "size": 0.81,
     "type": "kd"
   },
   "MobileNet-V2 (EnergyMLKD, ResNet50)": {
     "metrics": {
       "CIFAR100": 71.32
     },
-    "size": 7,
+    "size": 0.81,
     "type": "kd"
   }, 
   "MobileNet-V2 (EnergyMLKD, VGG13)": {
     "metrics": {
       "CIFAR100": 70.89
     },
-    "size": 7,
+    "size": 0.81,
     "type": "kd"
   },
   "MobileNet-V2 (R2KD, ResNet50)": {
@@ -1189,35 +1189,35 @@
       "CIFAR100": 70.42,
       "ImageNet": 73.47
     },
-    "size": 7,
+    "size": 0.81,
     "type": "kd"
   }, 
   "MobileNet-V2 (R2KD, VGG13)": {
     "metrics": {
       "CIFAR100": 70.85
     },
-    "size": 7,
+    "size": 0.81,
     "type": "kd"
   },
   "MobileNet-V2 (R2KD w/ CutOut, VGG13)": {
     "metrics": {
       "TinyImageNet": 63.41
     },
-    "size": 7,
+    "size": 0.81,
     "type": "kd"
   },
   "MobileNet-V2 (R2KD w/ AutoAugment, VGG13)": {
     "metrics": {
       "TinyImageNet": 63.36
     },
-    "size": 7,
+    "size": 0.81,
     "type": "kd"
   },
   "MobileNet-V2 (R2KD w/ MixUp, ResNet50)": {
     "metrics": {
       "CIFAR100": 70.70
     },
-    "size": 7,
+    "size": 0.81,
     "type": "kd"
   }, 
   "MobileNet-V2 (R2KD w/ MixUp, VGG13)": {
@@ -1225,14 +1225,14 @@
       "CIFAR100": 71.70,
       "TinyImageNet": 63.30
     },
-    "size": 7,
+    "size": 0.81,
     "type": "kd"
   },
   "MobileNet-V2 (R2KD w/ CutMix, ResNet50)": {
     "metrics": {
       "CIFAR100": 70.87
     },
-    "size": 7,
+    "size": 0.81,
     "type": "kd"
   }, 
   "MobileNet-V2 (R2KD w/ CutMix, VGG13)": {
@@ -1240,7 +1240,7 @@
       "CIFAR100": 71.58,
       "TinyImageNet": 63.52
     },
-    "size": 7,
+    "size": 0.81,
     "type": "kd"
   },
   "MobileNet-V2 (R2KD w/ CutMixPick, VGG13)": {
@@ -1248,7 +1248,7 @@
       "CIFAR100": 71.28,
       "TinyImageNet": 64.10
     },
-    "size": 7,
+    "size": 0.81,
     "type": "kd"
   },
   "MobileNet-V2 (FiGKD, ResNet50)": {
@@ -1256,7 +1256,7 @@
       "CIFAR100": 72.08,
 	    "TinyImageNet": 63.68
     },
-    "size": 7,
+    "size": 0.81,
     "type": "kd"
   }, 
   "MobileNet-V2 (FiGKD, VGG13)": {
@@ -1264,7 +1264,7 @@
       "CIFAR100": 71.81,
 	    "TinyImageNet": 63.99
     },
-    "size": 7,
+    "size": 0.81,
     "type": "kd"
   },
 
@@ -1274,7 +1274,7 @@
       "CIFAR100": 74.45,
 	    "TinyImageNet": 62.07
     },
-    "size": 47,
+    "size": 1.36,
     "type": "kd"
   },
   "ShuffleNet-V2 (FitNet, resnet32x4)": {
@@ -1282,7 +1282,7 @@
       "CIFAR100": 73.54,
 	    "TinyImageNet": 64.70
     },
-    "size": 47,
+    "size": 1.36,
     "type": "kd"
   },
   "ShuffleNet-V2 (ReviewKD, resnet32x4)": {
@@ -1290,14 +1290,14 @@
       "CIFAR100": 77.78,
 	    "TinyImageNet": 67.89
     },
-    "size": 47,
+    "size": 1.36,
     "type": "kd"
   },
   "ShuffleNet-V2 (DiffKD, resnet32x4)": {
     "metrics": {
       "CIFAR100": 77.52
     },
-    "size": 47,
+    "size": 1.36,
     "type": "kd"
   },
   "ShuffleNet-V2 (CAT-KD, resnet32x4)": {
@@ -1305,7 +1305,7 @@
       "CIFAR100": 78.41,
 	    "TinyImageNet": 67.69
     },
-    "size": 47,
+    "size": 1.36,
     "type": "kd"
   },
   "ShuffleNet-V2 (DKD, resnet32x4)": {
@@ -1313,7 +1313,7 @@
       "CIFAR100": 77.07,
 	    "TinyImageNet": 66.34
     },
-    "size": 47,
+    "size": 1.36,
     "type": "kd"
   },
   "ShuffleNet-V2 (MLKD, resnet32x4)": {
@@ -1321,49 +1321,49 @@
       "CIFAR100": 78.44,
 	    "TinyImageNet": 68.63
     },
-    "size": 47,
+    "size": 1.36,
     "type": "kd"
   },
   "ShuffleNet-V2 (EnergyKD, resnet32x4)": {
     "metrics": {
       "CIFAR100": 75.87
     },
-    "size": 47,
+    "size": 1.36,
     "type": "kd"
   },
   "ShuffleNet-V2 (EnergyDKD, resnet32x4)": {
     "metrics": {
       "CIFAR100": 77.55
     },
-    "size": 47,
+    "size": 1.36,
     "type": "kd"
   },
   "ShuffleNet-V2 (EnergyMLKD, resnet32x4)": {
     "metrics": {
       "CIFAR100": 78.64
     },
-    "size": 47,
+    "size": 1.36,
     "type": "kd"
   },
   "ShuffleNet-V2 (R2KD, resnet32x4)": {
     "metrics": {
       "CIFAR100": 78.44
     },
-    "size": 47,
+    "size": 1.36,
     "type": "kd"
   },
   "ShuffleNet-V2 (R2KD w/ CutOut, resnet32x4)": {
     "metrics": {
       "TinyImageNet": 68.53
     },
-    "size": 47,
+    "size": 1.36,
     "type": "kd"
   },
   "ShuffleNet-V2 (R2KD w/ AutoAugment, resnet32x4)": {
     "metrics": {
       "TinyImageNet": 68.85
     },
-    "size": 47,
+    "size": 1.36,
     "type": "kd"
   },
   "ShuffleNet-V2 (R2KD w/ MixUp, resnet32x4)": {
@@ -1371,7 +1371,7 @@
       "CIFAR100": 79.06,
       "TinyImageNet": 69.08
     },
-    "size": 47,
+    "size": 1.36,
     "type": "kd"
   },
   "ShuffleNet-V2 (R2KD w/ CutMix, resnet32x4)": {
@@ -1379,7 +1379,7 @@
       "CIFAR100": 79.44,
       "TinyImageNet": 69.20
     },
-    "size": 47,
+    "size": 1.36,
     "type": "kd"
   },
   "ShuffleNet-V2 (R2KD w/ CutMixPick, resnet32x4)": {
@@ -1387,7 +1387,7 @@
       "CIFAR100": 79.35,
       "TinyImageNet": 69.23
     },
-    "size": 47,
+    "size": 1.36,
     "type": "kd"
   },
   "ShuffleNet-V2 (FiGKD, resnet32x4)": {
@@ -1395,7 +1395,7 @@
       "CIFAR100": 79.64,
 	    "TinyImageNet": 70.10
     },
-    "size": 47,
+    "size": 1.36,
     "type": "kd"
   }
 }
