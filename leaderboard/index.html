@@ -133,7 +133,7 @@
 	<div class="form-check">
 	  <input class="form-check-input" type="checkbox" value="" id="topAccuracyOnly">
 	  <label class="form-check-label text-dark" for="topAccuracyOnly">
-		Show Only <strong>Top-5</strong> Models
+		Show Only <strong>Top-10</strong> Models
 	  </label>
 	</div>
 	
@@ -168,10 +168,12 @@
     <div id="notes">
       <h3>Acknowledgements</h3>
       <div class="inline-block mt-3">
-        <ol>
-		  Thanks for the authors of EvalPlus for sharing the template source code.
-        </ol>
-      </div>
+		<p style="text-align: center;">Thanks to the authors of EvalPlus for sharing the template source code.</p>
+		<ol>
+		  <li><strong class="text-primary">Baseline</strong> and <strong class="text-purple">KD</strong> models are evaluated in terms of Top-1 Accuracy across various datasets.</li>
+		  <li>Model parameters are measured based on the CIFAR-100 image resolution.</li>
+		</ol>
+	  </div>
     </div>
   </div>
 
@@ -221,7 +223,7 @@
 		  containLabel: true,
 		},
 		xAxis: {
-		  name: "FLOPs (M)",
+		  name: "Params (M)",
 		  type: "value",
 		  boundaryGap: false,
 		  data: [],
@@ -319,7 +321,7 @@
 		// 🔽 3. Top-5 필터
 		const topOnly = document.getElementById("topAccuracyOnly")?.checked || false;
 		if (topOnly) {
-		data = data.slice(0, 5);
+		data = data.slice(0, 10);
 		}
 
 		const thead = document.createElement("thead");
