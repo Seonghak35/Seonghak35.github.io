@@ -17,5 +17,6 @@ nav_order: 6
 ---
 
 <div style="text-align: center; margin-top: 2rem;">
-  <a href="/kd-leaderboard/" class="btn btn-primary btn-lg">👉 Go to Interactive 📊 Leaderboard</a>
+  <p>Click below to explore the interactive leaderboard.</p>
+  <a href="/leaderboard/" class="btn btn-primary btn-lg">👉 Go to Interactive Leaderboard</a>
 </div>
