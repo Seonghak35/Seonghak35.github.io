@@ -386,11 +386,6 @@
 			  model["size"] != null && model["metrics"] && model["metrics"][score] != null
 			);
 
-			if (topOnly) {
-			  sizedModels = sizedModels
-				.sort((a, b) => b["metrics"][score] - a["metrics"][score])
-				.slice(0, 5); // 상위 10개만
-}
 		  const nonSizeModels = data.filter((model) => model["size"] == null).slice(0, maxMarkLineModels);
 
 		  const sizeList = [...new Set(sizedModels.map(m => Math.round(m.size)))].sort((a, b) => a - b);
