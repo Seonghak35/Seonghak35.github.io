@@ -1,7 +1,7 @@
 {
   "YOLOv3-ASFF": {
     "link": "https://arxiv.org/pdf/1911.09516",
-    "open-data": "COCO",
+    "dataset": "custom",
     "metrics": {
       "mAP@50": 63.0,
       "mAP@50:95": 42.4,
@@ -11,7 +11,7 @@
   },
   "EfficientDet-D0": {
     "link": "https://arxiv.org/pdf/1911.09070",
-    "open-data": "COCO",
+    "dataset": "custom",
     "metrics": {
       "mAP@50": 52.2,
       "mAP@50:95": 33.8,
@@ -21,7 +21,7 @@
   },
    "EfficientDet-D1": {
     "link": "https://arxiv.org/pdf/1911.09070",
-    "open-data": "COCO",
+    "dataset": "cococustom",
     "metrics": {
       "mAP@50": 58.6,
       "mAP@50:95": 39.6,
@@ -31,7 +31,7 @@
   },
    "EfficientDet-D2": {
     "link": "https://arxiv.org/pdf/1911.09070",
-    "open-data": "COCO",
+    "dataset": "cococustom",
     "metrics": {
       "mAP@50": 62.3,
       "mAP@50:95": 43.0,
@@ -41,7 +41,7 @@
   },
    "EfficientDet-D3": {
     "link": "https://arxiv.org/pdf/1911.09070",
-    "open-data": "COCO",
+    "dataset": "coco",
     "metrics": {
       "mAP@50": 65.0,
       "mAP@50:95": 45.8,
@@ -51,7 +51,7 @@
   },
   "YOLOv4": {
     "link": "https://arxiv.org/pdf/2004.10934",
-    "open-data": "COCO",
+    "dataset": "coco",
     "metrics": {
       "mAP@50": 65.7,
       "mAP@50:95": 43.5,
@@ -61,7 +61,7 @@
   },
    "YOLOv4-CSP": {
     "link": "https://arxiv.org/pdf/2011.08036",
-    "open-data": "COCO",
+    "dataset": "coco",
     "metrics": {
       "mAP@50": 66.2,
       "mAP@50:95": 47.5,
@@ -71,7 +71,7 @@
   },
    "YOLOv5-M": {
     "link": "https://github.com/ultralytics/yolov5",
-    "open-data": "COCO",
+    "dataset": "coco",
     "metrics": {
       "mAP@50": 63.1,
       "mAP@50:95": 44.5,
@@ -81,7 +81,7 @@
   },
     "YOLOv5-L": {
     "link": "https://github.com/ultralytics/yolov5",
-    "open-data": "COCO",
+    "dataset": "coco",
     "metrics": {
       "mAP@50": 66.9,
       "mAP@50:95": 48.2,
@@ -91,7 +91,7 @@
   },
     "YOLOv5-X": {
     "link": "https://github.com/ultralytics/yolov5",
-    "open-data": "COCO",
+    "dataset": "coco",
     "metrics": {
       "mAP@50": 68.8,
       "mAP@50:95": 50.4,
@@ -101,7 +101,7 @@
   },
     "YOLOX-DarkNet53": {
     "link": "https://arxiv.org/pdf/2107.08430",
-    "open-data": "COCO",
+    "dataset": "coco",
     "metrics": {
       "mAP@50": 67.3,
       "mAP@50:95": 47.4,
@@ -111,7 +111,7 @@
   },
     "YOLOX-M": {
     "link": "https://arxiv.org/pdf/2107.08430",
-    "open-data": "COCO",
+    "dataset": "coco",
     "metrics": {
       "mAP@50": 65.4,
       "mAP@50:95": 46.4,
@@ -121,7 +121,7 @@
   },
     "YOLOX-L": {
     "link": "https://arxiv.org/pdf/2107.08430",
-    "open-data": "COCO",
+    "dataset": "coco",
     "metrics": {
       "mAP@50": 68.5,
       "mAP@50:95": 50.0,
@@ -131,7 +131,7 @@
   },
     "YOLOX-X": {
     "link": "https://arxiv.org/pdf/2107.08430",
-    "open-data": "COCO",
+    "dataset": "coco",
     "metrics": {
       "mAP@50": 69.6,
       "mAP@50:95": 51.2,

@@ -88,7 +88,62 @@
 </head>
 
 <body>
-  <div id="content" class="container-fluid d-flex flex-column align-items-center gap-3">
+	<div class="d-flex">
+		<div id="sidebar" class="p-3 bg-light" style="width: 200px;">
+			<h5>Task</h5>
+			<div class="form-check">
+			  <input class="form-check-input" type="checkbox" value="classification" id="task-classification">
+			  <label class="form-check-label" for="task-classification">Classification</label>
+			</div>
+			<div class="form-check">
+			  <input class="form-check-input" type="checkbox" value="detection" id="task-detection" checked>
+			  <label class="form-check-label" for="task-detection">Detection</label>
+			</div>
+			<div class="form-check">
+			  <input class="form-check-input" type="checkbox" value="segmentation" id="task-segmentation">
+			  <label class="form-check-label" for="task-segmentation">Segmentation</label>
+			</div>
+			
+		<h5 class="mt-4">Dataset</h5>
+		  <div class="form-check">
+			<input class="form-check-input" type="checkbox" value="coco" id="coco" checked>
+			<label class="form-check-label" for="coco">COCO</label>
+		  </div>
+		  <div class="form-check">
+			<input class="form-check-input" type="checkbox" value="custom" id="custom">
+			<label class="form-check-label" for="custom">Custom</label>
+		  </div>
+
+		<h5 class="mt-4">mAP_Size</h5>
+		  <div class="form-check">
+		<input class="form-check-input" type="checkbox" value="mAP_L" id="metric-l">
+		<label class="form-check-label" for="metric-l">mAP_L</label>
+		</div>
+		<div class="form-check">
+		<input class="form-check-input" type="checkbox" value="mAP_M" id="metric-m">
+		<label class="form-check-label" for="metric-m">mAP_M</label>
+		</div>
+		<div class="form-check">
+		<input class="form-check-input" type="checkbox" value="mAP_S" id="metric-s">
+		<label class="form-check-label" for="metric-s">mAP_S</label>
+		</div>
+
+		<h5 class="mt-4">mAP_Class</h5>
+		<div class="form-check">
+		<input class="form-check-input" type="checkbox" value="mAP_Tank" id="class-tank">
+		<label class="form-check-label" for="class-tank">mAP_Tank</label>
+		</div>
+		<div class="form-check">
+		<input class="form-check-input" type="checkbox" value="mAP_Airplane" id="class-airplane">
+		<label class="form-check-label" for="class-airplane">mAP_Airplane</label>
+		</div>
+		<div class="form-check">
+		<input class="form-check-input" type="checkbox" value="mAP_Ship" id="class-ship">
+		<label class="form-check-label" for="class-ship">mAP_Ship</label>
+		</div>
+
+		</div>
+		<div id="content" class="container-fluid p-4">
     <h1 class="text-nowrap mt-5">📊 ADD AI Models Leaderboard</h1>
     <h3 class="fw-light text-nowrap">
       <small id="warning">ADDEval evaluates AI models developed in ADD on a variety of datasets.<br /></small>
@@ -98,12 +153,6 @@
           src="assets/add-badge.png"
           alt="add" class="img-fluid"
 	  style="height: 25px;"/></a>
-    </div>
-    <div class="btn-group" role="group" id="Benchmark">
-      <input type="radio" class="btn-check" name="btnradio" id="mAP5095" checked />
-      <label class="btn btn-outline-primary" for="mAP5095">mAP@50:95</label>
-      <input type="radio" class="btn-check" name="btnradio" id="mAP50" />
-      <label class="btn btn-outline-primary" for="mAP50">mAP@50</label>
     </div>
     <div id="chart" style="width: 100%; height: 600px"></div>
     <div class="container-fluid d-flex flex-row flex-nowrap">
@@ -148,6 +197,26 @@
   </div>
 
 	<script>
+
+	function getSelectedDatasetKey() {
+	const coco = document.getElementById("coco").checked;
+	const custom = document.getElementById("custom").checked;
+
+	if (coco && custom) return "cococustom";
+	else if (coco) return "coco";
+	else if (custom) return "custom";
+	else return null;  // 둘 다 체크 안 했을 경우
+	}
+
+	function filterDataByDataset(data, datasetKey) {
+	if (!datasetKey) return []; // 아무것도 안 체크 시
+	return data.filter(row => row["dataset"] === datasetKey);
+	}
+
+	function isDetectionTaskSelected() {
+	return document.getElementById("task-detection").checked;
+	}
+
 	  const originTable = document.getElementById("origin");
 	  const plusedTable = document.getElementById("plused");
 	  const chartDom = document.getElementById("chart");
@@ -257,17 +326,17 @@
 		],
 	  };
 
-	  const displayTable = (table, score) => {
+	  const displayTable = (table, score, data) => {
 		const readableNameMap = {
-		  "mAP@50": "mAP@50 (%)",
-		  "mAP@50:95": "mAP@50:95 (%)",
-		  "FPS": "FPS",
+			"mAP@50": "mAP@50 (%)",
+			"mAP@50:95": "mAP@50:95 (%)",
+			"FPS": "FPS",
 		};
 		const theaders = ["Model", readableNameMap[score] || score];
 
-		const data = globalData
-		  .filter((row) => row["metrics"][score] != null)
-		  .sort((a, b) => b["metrics"][score] - a["metrics"][score]);
+		const filtered = data
+			.filter((row) => row["metrics"][score] != null)
+			.sort((a, b) => b["metrics"][score] - a["metrics"][score]);
 
 		const thead = document.createElement("thead");
 		const headerRow = document.createElement("tr");
@@ -305,17 +374,6 @@
 		  modelCell.appendChild(modelLink);
 		  modelCell.classList.add("d-flex", "flex-nowrap");
 
-		  const opendata = row["open-data"];
-		  if (opendata.toUpperCase() === "FULL") {
-			const badge = document.createElement("span");
-			badge.textContent = "💚";
-			modelCell.appendChild(badge);
-		  } else if (opendata.toUpperCase() === "PARTIAL") {
-			const badge = document.createElement("span");
-			badge.textContent = "💙";
-			modelCell.appendChild(badge);
-		  }
-
 		  dataRow.appendChild(modelCell);
 
 		  const metricCell = document.createElement("td");
@@ -329,19 +387,20 @@
 		table.appendChild(tbody);
 	  };
 
-	  const displayChart = (score) => {
+	  const displayChart = (score, data) => {
 		const maxMarkLineModels = 8;
-		const data = globalData
-		  .filter((model) => model["metrics"] && model["metrics"][score] != null)
-		  .sort((a, b) => b["metrics"][score] - a["metrics"][score]);
 
-		const sizeList = [...new Set(data.filter(m => m.size != null).map(m => Math.round(m.size)))].sort((a, b) => a - b);
+		const filtered = data
+			.filter((model) => model["metrics"] && model["metrics"][score] != null)
+			.sort((a, b) => b["metrics"][score] - a["metrics"][score]);
+
+		const sizeList = [...new Set(filtered.filter(m => m.size != null).map(m => Math.round(m.size)))].sort((a, b) => a - b);
 
 		chartOption.xAxis.data = sizeList;
-		chartOption.yAxis.max = 1 + Math.max(...data.map((model) => model["metrics"][score]));
+		chartOption.yAxis.max = 1 + Math.max(...filtered.map((model) => model["metrics"][score]));
 
-		const sizedModels = data.filter((model) => model["size"] != null);
-		const nonSizeModels = data.filter((model) => model["size"] == null).slice(0, maxMarkLineModels);
+		const sizedModels = filtered.filter((model) => model["size"] != null);
+		const nonSizeModels = filtered.filter((model) => model["size"] == null).slice(0, maxMarkLineModels);
 
 		chartOption.series[0].data = [];
 		chartOption.series[0].markLine.data = [];
@@ -375,30 +434,36 @@
 		chart.setOption(chartOption);
 	  };
 
-	  const map5095Radio = document.getElementById("mAP5095");
-	  const map50Radio = document.getElementById("mAP50");
+	  function updateView() {
+		if (!isDetectionTaskSelected()) {
+			clearTable();
+			clearChart();
+			document.getElementById("warning").innerText = "Select 'Detection' task to view leaderboard.";
+			return;
+		}
 
-	  map5095Radio.addEventListener("click", function () {
+		const selectedKey = getSelectedDatasetKey();
+		const filteredData = filterDataByDataset(globalData, selectedKey);
+
 		clearTable();
-		displayTable(plusedTable, "mAP@50:95");
-		displayTable(originTable, "FPS");
 		clearChart();
-		displayChart("mAP@50:95");
-	  });
+		displayTable(plusedTable, "mAP@50:95", filteredData);
+		displayTable(originTable, "FPS", filteredData);
+		displayChart("mAP@50:95", filteredData);
 
-	  map50Radio.addEventListener("click", function () {
-		clearTable();
-		displayTable(plusedTable, "mAP@50");
-		displayTable(originTable, "FPS");
-		clearChart();
-		displayChart("mAP@50");
-	  });
+		document.getElementById("warning").innerText =
+			"ADDEval evaluates AI models developed in ADD on a variety of datasets.";
+		}
+
+			document.getElementById("coco").addEventListener("change", updateView);
+			document.getElementById("custom").addEventListener("change", updateView);
+			document.getElementById("task-detection").addEventListener("change", updateView);
+			document.getElementById("task-classification").addEventListener("change", updateView);
+			document.getElementById("task-segmentation").addEventListener("change", updateView);
 
 
-	  // 초기 로딩 시 한 번만 실행
-	  displayTable(plusedTable, "mAP@50:95");
-	  displayTable(originTable, "FPS");
-	  displayChart("mAP@50:95");
+		// 초기 로딩 시
+		updateView();
 
 	  window.addEventListener("resize", () => {
 		chart.resize();
