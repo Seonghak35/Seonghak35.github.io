@@ -1,5 +1,16 @@
 ---
 ---
+@article{EAAI,
+  abbr={EAAI},
+  title={Teach Sample-Specific Knowledge: Seperated Distillation on the Correct and Incorrect samples},
+  author={Kim, Seonghak and Ham, Gyeongdo and Lee, Suin and Kim, Daeshik},
+  journal={Engineering Applications of Artificial Intelligence},
+  year={2025},
+  month={Oct.},
+  abstract={Knowledge distillation (KD) methods enhance the performance of lightweight student models by transferring knowledge from powerful but complex teacher models for real-time application. Traditional logit-based KD methods use forward Kullback-Leibler divergence (FKLD) to transfer meaningful knowledge. However, FKLD typically exhibits a mode-averaging property, causing students to focus on non-target information, whether the teacher's samples are correct or incorrect. Additionally, when handling uncertain samples, even teacher models may fail to classify them accurately, leading to incorrect predictions and confusing the students. To address these issues, we classify the dataset into two groups based on the teacher's predictions: correct and incorrect samples. To ensure a more reliable transfer of knowledge from teacher to student for correct samples, we employ both forward Kullback-Leibler divergence (FKLD) and reverse Kullback-Leibler divergence (RKLD), which has mode-focusing properties. We also reduce temperature scaling to maximize information about the target. Conversely, for incorrect predictions, our method minimizes the teacher's knowledge, encouraging students to rely more on the true labels by focusing on cross-entropy loss. Experimental results on both classification and object detection tasks demonstrate that the our method, Teach Sample-Specific Knowledge (TSSK), outperforms state-of-the-art KD methods, making it ideal for deployment on-devices in real-world scenarios.}
+}
+
+
 @article{kim2025biased,
   abbr={ArXiv},
   title={Biased Teacher, Balanced Student},
@@ -21,15 +32,6 @@
   abstract={Knowledge distillation (KD) is a widely adopted technique for transferring knowledge from a high-capacity teacher model to a smaller student model by aligning their output distributions. However, existing methods often underperform in fine-grained visual recognition tasks, where distinguishing subtle differences between visually similar classes is essential. This performance gap stems from the fact that conventional approaches treat the teacher's output logits as a single, undifferentiated signal-assuming all contained information is equally beneficial to the student. Consequently, student models may become overloaded with redundant signals and fail to capture the teacher's nuanced decision boundaries. To address this issue, we propose Fine-Grained Knowledge Distillation (FiGKD), a novel frequency-aware framework that decomposes a model's logits into low-frequency (content) and high-frequency (detail) components using the discrete wavelet transform (DWT). FiGKD selectively transfers only the high-frequency components, which encode the teacher's semantic decision patterns, while discarding redundant low-frequency content already conveyed through ground-truth supervision. Our approach is simple, architecture-agnostic, and requires no access to intermediate feature maps. Extensive experiments on CIFAR-100, TinyImageNet, and multiple fine-grained recognition benchmarks show that FiGKD consistently outperforms state-of-the-art logit-based and feature-based distillation methods across a variety of teacher-student configurations. These findings confirm that frequency-aware logit decomposition enables more efficient and effective knowledge transfer, particularly in resource-constrained settings.},
   arxiv={2505.11897},
 }
-
-@article{EAAI,
-  abbr={Under Review},
-  title={Teach Sample-Specific Knowledge: Seperated Distillation on the Correct and Incorrect samples},
-  author={Kim, Seonghak and Ham, Gyeongdo and Lee, Suin and Kim, Daeshik},
-  journal={Engineering Applications of Artificial Intelligence},
-  year={2025},
-}
-
 
 @article{KIM10623281,
   abbr={TKDE},
