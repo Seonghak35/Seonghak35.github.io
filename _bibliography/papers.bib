@@ -1,13 +1,17 @@
 ---
 ---
-@article{EAAI,
+@article{kim2025teach,
   abbr={EAAI},
-  title={Teach Sample-Specific Knowledge: Seperated Distillation on the Correct and Incorrect samples},
+  title={Teach sample-specific knowledge: Separated distillation based on samples},
   author={Kim, Seonghak and Ham, Gyeongdo and Lee, Suin and Kim, Daeshik},
   journal={Engineering Applications of Artificial Intelligence},
+  volume={162},
+  pages={112696},
   year={2025},
-  month={Oct.},
-  abstract={Knowledge distillation (KD) methods enhance the performance of lightweight student models by transferring knowledge from powerful but complex teacher models for real-time application. Traditional logit-based KD methods use forward Kullback-Leibler divergence (FKLD) to transfer meaningful knowledge. However, FKLD typically exhibits a mode-averaging property, causing students to focus on non-target information, whether the teacher's samples are correct or incorrect. Additionally, when handling uncertain samples, even teacher models may fail to classify them accurately, leading to incorrect predictions and confusing the students. To address these issues, we classify the dataset into two groups based on the teacher's predictions: correct and incorrect samples. To ensure a more reliable transfer of knowledge from teacher to student for correct samples, we employ both forward Kullback-Leibler divergence (FKLD) and reverse Kullback-Leibler divergence (RKLD), which has mode-focusing properties. We also reduce temperature scaling to maximize information about the target. Conversely, for incorrect predictions, our method minimizes the teacher's knowledge, encouraging students to rely more on the true labels by focusing on cross-entropy loss. Experimental results on both classification and object detection tasks demonstrate that the our method, Teach Sample-Specific Knowledge (TSSK), outperforms state-of-the-art KD methods, making it ideal for deployment on-devices in real-world scenarios.}
+  month={Dec.},
+  publisher={Elsevier},
+  abstract={Knowledge distillation (KD) methods enhance the performance of lightweight student models by transferring knowledge from powerful but complex teacher models for real-time application. Traditional logit-based KD methods use forward Kullback-Leibler divergence (FKLD) to transfer meaningful knowledge. However, FKLD typically exhibits a mode-averaging property, causing students to focus on non-target information, whether the teacher's samples are correct or incorrect. Additionally, when handling uncertain samples, even teacher models may fail to classify them accurately, leading to incorrect predictions and confusing the students. To address these issues, we classify the dataset into two groups based on the teacher's predictions: correct and incorrect samples. To ensure a more reliable transfer of knowledge from teacher to student for correct samples, we employ both forward Kullback-Leibler divergence (FKLD) and reverse Kullback-Leibler divergence (RKLD), which has mode-focusing properties. We also reduce temperature scaling to maximize information about the target. Conversely, for incorrect predictions, our method minimizes the teacher's knowledge, encouraging students to rely more on the true labels by focusing on cross-entropy loss. Experimental results on both classification and object detection tasks demonstrate that the our method, Teach Sample-Specific Knowledge (TSSK), outperforms state-of-the-art KD methods, making it ideal for deployment on-devices in real-world scenarios.},
+  html={https://doi.org/10.1016/j.engappai.2025.112696},
 }
 
 
