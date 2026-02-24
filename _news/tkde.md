@@ -5,5 +5,5 @@ inline: true
 related_posts: false
 ---
 
-I received an acceptance for my research from IEEE Transactions on Knowledge and Data Engineering! 
+Our paper on **robustness-reinforced knowledge distillation with correlation distance and network pruning** has been accepted to *IEEE Transactions on Knowledge and Data Engineering*.
 
