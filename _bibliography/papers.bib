@@ -18,6 +18,7 @@
   year={2026},
   month={Jun.},
   note={Denver, CO, USA},
+  selected={true}
 }
 
 @inproceedings{yoon2026metayolo,
@@ -45,6 +46,7 @@
   publisher={Elsevier},
   abstract={Knowledge distillation (KD) methods enhance the performance of lightweight student models by transferring knowledge from powerful but complex teacher models for real-time application. Traditional logit-based KD methods use forward Kullback-Leibler divergence (FKLD) to transfer meaningful knowledge. However, FKLD typically exhibits a mode-averaging property, causing students to focus on non-target information, whether the teacher's samples are correct or incorrect. Additionally, when handling uncertain samples, even teacher models may fail to classify them accurately, leading to incorrect predictions and confusing the students. To address these issues, we classify the dataset into two groups based on the teacher's predictions: correct and incorrect samples. To ensure a more reliable transfer of knowledge from teacher to student for correct samples, we employ both forward Kullback-Leibler divergence (FKLD) and reverse Kullback-Leibler divergence (RKLD), which has mode-focusing properties. We also reduce temperature scaling to maximize information about the target. Conversely, for incorrect predictions, our method minimizes the teacher's knowledge, encouraging students to rely more on the true labels by focusing on cross-entropy loss. Experimental results on both classification and object detection tasks demonstrate that the our method, Teach Sample-Specific Knowledge (TSSK), outperforms state-of-the-art KD methods, making it ideal for deployment on-devices in real-world scenarios.},
   html={https://doi.org/10.1016/j.engappai.2025.112696},
+  selected={true}
 }
 
 @article{KIM10623281,
@@ -57,6 +59,7 @@
   month={Aug.},
   abstract={The improvement in the performance of efficient and lightweight models (i.e., the student model) is achieved through knowledge distillation (KD), which involves transferring knowledge from more complex models (i.e., the teacher model). However, most existing KD techniques rely on Kullback-Leibler (KL) divergence, which has certain limitations. First, if the teacher distribution has high entropy, the KL divergence's mode-averaging nature hinders the transfer of sufficient target information. Second, when the teacher distribution has low entropy, the KL divergence tends to excessively focus on specific modes, which fails to convey an abundant amount of valuable knowledge to the student. Consequently, when dealing with datasets that contain numerous confounding or challenging samples, student models may struggle to acquire sufficient knowledge, resulting in subpar performance. Furthermore, in previous KD approaches, we observed that data augmentation, a technique aimed at enhancing a model's generalization, can have an adverse impact. Therefore, we propose a Robustness-Reinforced Knowledge Distillation (R2KD) that leverages correlation distance and network pruning. This approach enables KD to effectively incorporate data augmentation for performance improvement. Extensive experiments on various datasets, including CIFAR-100, FGVR, TinyImagenet, and ImageNet, demonstrate our method's superiority over current state-of-the-art methods.},
   html={https://doi.org/10.1109/TKDE.2024.3438074},
+  selected={true}
 }
 
 @article{KIM2024111911,
@@ -70,6 +73,7 @@
   publisher={Elsevier},
   abstract={To apply the latest computer vision techniques that require a large computational cost in real industrial applications, knowledge distillation methods (KDs) are essential. Existing logit-based KDs apply the constant temperature scaling to all samples in dataset, limiting the utilization of knowledge inherent in each sample individually. In our approach, we classify the dataset into two categories (i.e., low energy and high energy samples) based on their energy score. Through experiments, we have confirmed that low energy samples exhibit high confidence scores, indicating certain predictions, while high energy samples yield low confidence scores, meaning uncertain predictions. To distill optimal knowledge by adjusting non-target class predictions, we apply a higher temperature to low energy samples to create smoother distributions and a lower temperature to high energy samples to achieve sharper distributions. When compared to previous logit-based and feature-based methods, our energy-based KD (Energy KD) achieves better performance on various datasets. Especially, Energy KD shows significant improvements on CIFAR-100-LT and ImageNet datasets, which contain many challenging samples. Furthermore, we propose high energy-based data augmentation (HE-DA) for further improving the performance. We demonstrate that higher performance improvement could be achieved by augmenting only a portion of the dataset rather than the entire dataset, suggesting that it can be employed on resource-limited devices. To the best of our knowledge, this paper represents the first attempt to make use of energy function in knowledge distillation and data augmentation, and we believe it will greatly contribute to future research.},
   html={https://doi.org/10.1016/j.knosys.2024.111911},
+  selected={true}
 }
 
 

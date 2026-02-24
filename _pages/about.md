@@ -15,7 +15,7 @@ profile:
 
 news: true # includes a list of news items
 latest_posts: false # includes a list of the newest posts
-selected_papers: false # includes a list of papers marked as "selected={true}"
+selected_papers: true # includes a list of papers marked as "selected={true}"
 social: false # includes social icons at the bottom of the page
 ---
 I am a researcher at [ADD](https://add.re.kr/eps), where I focus on applying various artificial intelligence (AI) technologies, including computer vision, to real-world applications. <strong>My research aims to bridge the gap between cutting-edge AI advancements and practical implementation.</strong>
