@@ -1,8 +1,8 @@
-"CVPR":
+"CVPR26":
         url: https://cvpr.thecvf.com/
         color: "#1b427d"
 
-"WACV":
+"WACV26":
         color: "#212529"
         url: https://wacv.thecvf.com/
 
