@@ -1,54 +1,57 @@
+"CVPR":
+        url: https://cvpr.thecvf.com/
+        color: "#1b427d"
+
+"WACV":
+        color: "#212529"
+        url: https://wacv.thecvf.com/
+
+"WACV24":
+        color: "#2775bc"
+        url: https://wacv2024.thecvf.com/
+
 "EAAI":
         url: https://www.sciencedirect.com/journal/engineering-applications-of-artificial-intelligence
-        color: "blue"
+        color: "#583675"
 
 "TKDE":
         url: https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=69
-        color: "blue"
+        color: "#14303e"
 
 "KBS":
         url: https://www.sciencedirect.com/journal/knowledge-based-systems
-        color: "blue"
-
-"KSR":
-        color: "gray"
+        color: "#efe20b"
 
 "IJASS":
-  url: https://link.springer.com/journal/42405
-  color: "blue"
+        url: https://link.springer.com/journal/42405
+        color: "#013350"
 
 "Ocean Eng.":
         url: https://www.sciencedirect.com/journal/ocean-engineering
-        color: "green"
+        color: "#0e173f"
 
 "arXiv":
         url: https://arxiv.org/
-        color: "black"
+        color: "#b31b1b"
+
+"KSR":
+        color: "gray"
 
 "S&V":
         color: "gray"
 
 "ACFD":
-        color: "#FF1493"
+        color: "gray"
 
 "AIAA":
-        color: "#6495ED"
-        url: https://www.aiaa.org/events-learning/event/2024/01/08/default-calendar/2024-aiaa-science-and-technology-forum-and-exposition-(aiaa-scitech-forum)
+        color: "gray"
 
-"WACV":
-        color: "#2F4F4F"
-        url: https://wacv2024.thecvf.com/
+"NCFE":
+        color: "green"
+
+"KSASS":
+        color: "green"
 
 "Under Review":
         color: "#FFD700"
-
-"NCFE":
-        color: "#B22222"
-
-"KSASS":
-        color: "#ADD8E6"
-
-
-
-
 

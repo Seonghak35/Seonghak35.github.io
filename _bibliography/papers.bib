@@ -1,7 +1,7 @@
 ---
 ---
 @article{kim2025figkd,
-  abbr={ArXiv},
+  abbr={arXiv},
   title={FiGKD: Fine-Grained Knowledge Distillation via High-Frequency Detail Transfer},
   author={Kim, Seonghak},
   journal={arXiv preprint arXiv:2505.11897},
@@ -16,7 +16,22 @@
   author={Kim, Seonghak},
   booktitle={IEEE/CVF Conference on computer vision and pattern recognition},
   year={2026},
+  month={Jun.},
+  note={Denver, CO, USA},
 }
+
+@inproceedings{yoon2026metayolo,
+  abbr={WACV},
+  title={Meta-YOLO: Metadata-Guided Real-Time Object Detector in Aerial Imagery},
+  author={Yoon, Deukryeol and Kim, Seonghak and Sung, Young Hwa and Jung, Jinho},
+  booktitle={Winter Conference on Applications of Computer Vision},
+  year={2026},
+  month={Mar},
+  abstract={Aerial object detection is constrained by tiny targets, large scale variation, and strict real-time limits. It supports traffic monitoring, disaster response, and infrastructure inspection. Yet current detectors often ignore available platform metadata and process frames in isolation. This omission prevents receptive fields from adapting to scale variation and reduces accuracy. We propose META-YOLO to exploit platform metadata for scale-aware aerial object detection in real time. META-YOLO injects normalized telemetry into spatial sampling to guide feature extraction. It modulates deformable convolution offsets using a spatial metadata map aligned with the image. This links visual features with platform state and enables receptive fields to adapt to object scale. Built on YOLOX, META-YOLO adds two modules: feature modulation and offset correction. Evaluated on 327K aerial frames with metadata, META-YOLO achieves up to +8.7 AP gains over YOLOX in lightweight regimes and consistently outperforms other recent detectors. It preserves real-time throughput with negligible overhead and improves accuracy without extra visual processing.},
+  html={https://deukryeol-yoon.github.io/assets/wacv2026.pdf},
+  note={Tucson, AZ, USA}
+}
+
 
 @article{kim2025teach,
   abbr={EAAI},
@@ -59,7 +74,7 @@
 
 
 @article{ham2023cosine,
-  abbr={ArXiv},
+  abbr={arXiv},
   title={Cosine Similarity Knowledge Distillation for Individual Class Information Transfer},
   author={Kim, Seonghak and Ham, Gyeongdo and Lee, Suin and Lee, Jae-Hyeok and Kim, Daeshik},
   journal={arXiv preprint arXiv:2311.14307},
@@ -119,13 +134,15 @@
   note={Orlando, FL, USA}
 }
 
-@inproceedings{wacv,
-  abbr={WACV},
+@inproceedings{jang2024robust,
+  abbr={WACV24},
   title={Robust Unsupervised Domain Adaptation through Negative-View Regularization},
   author={Jang*, Joonhyeok and Lee*, Shunhyeok and Kim, Seonghak and Kim, Jungun and Kim, Seonghyun and Kim, Daeshik},
   booktitle={Winter Conference on Applications of Computer Vision},
   year={2024},
   month={Jan},
+  abstract={In the realm of Unsupervised Domain Adaptation (UDA), Vision Transformers (ViTs) have recently demonstrated remarkable adaptability surpassing that of traditional Convolutional Neural Networks (CNNs). Nevertheless, the patch-based structure of ViTs heavily relies on local features within image patches, potentially leading to reduced robustness when confronted with out-of-distribution (OOD) samples. To address this concern, we introduce a novel regularizer tailored specifically for UDA. By leveraging negative views, ie target-domain samples applied by negative augmentations, we make the learning process more intricate, thereby preventing models from taking shortcuts in spatial context recognition. We present a novel loss function, rooted in contrastive principles, to effectively distinguish between the negative views and original target samples. By integrating this novel regularizer with existing UDA methodologies, we guide ViTs to prioritize context relationships among local patches, thereby enhancing the robustness of ViTs. Our proposed Negative View-based Contrastive (NVC) regularizer substantially boosts the performance of baseline UDA methods across diverse benchmark datasets. Furthermore, we release new dataset, Retail-71, comprising 71 classes of images commonly encountered in retail stores. Through comprehensive experimentation, we showcase the effectiveness of our approach on traditional benchmarks as well as the novel retail domain. These results substantiate the robust adaptation capabilities of our proposed method. Our method is implemented at our repository.},
+  html={https://openaccess.thecvf.com/content/WACV2024/papers/Jang_Robust_Unsupervised_Domain_Adaptation_Through_Negative-View_Regularization_WACV_2024_paper.pdf},
   note={Waikoloa, HI, USA}
 }
 
