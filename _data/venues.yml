@@ -47,10 +47,10 @@
         color: "gray"
 
 "NCFE":
-        color: "green"
+        color: "gray"
 
 "KSASS":
-        color: "green"
+        color: "gray"
 
 "Under Review":
         color: "#FFD700"
