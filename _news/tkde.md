@@ -5,5 +5,5 @@ inline: true
 related_posts: false
 ---
 
-I am excited to share that my first-author paper on **robustness-reinforced knowledge distillation using correlation distance and network pruning** has been accepted to *IEEE Transactions on Knowledge and Data Engineering (TKDE)*.
+My first-author paper on **robustness-reinforced knowledge distillation using correlation distance and network pruning** has been accepted to *IEEE Transactions on Knowledge and Data Engineering (TKDE)*.
 
