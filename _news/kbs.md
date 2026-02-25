@@ -5,5 +5,5 @@ inline: true
 related_posts: false
 ---
 
-Our paper **leveraging energy functions for knowledge distillation and data augmentation** has been accepted to *Knowledge-Based Systems*.
+I am excited to share that my first-author paper **leveraging energy functions for knowledge distillation and data augmentation** has been accepted to *Knowledge-Based Systems*.
 
