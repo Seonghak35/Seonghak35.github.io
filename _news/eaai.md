@@ -5,5 +5,5 @@ inline: true
 related_posts: false
 ---
 
-I am excited to share that my first-author paper on **teaching sample-specific knowledge via separated distillation** has been accepted to *Engineering Applications of Artificial Intelligence*.
+My first-author paper on **teaching sample-specific knowledge via separated distillation** has been accepted to *Engineering Applications of Artificial Intelligence*.
 
