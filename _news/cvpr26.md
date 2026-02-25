@@ -5,5 +5,5 @@ inline: true
 related_posts: false
 ---
 
-I am excited to share that my first-author paper on **long-tailed knowledge distillation addressing teacher bias** has been accepted to *CVPR 2026*.
+My first-author paper on **long-tailed knowledge distillation addressing teacher bias** has been accepted to *CVPR 2026*.
 
