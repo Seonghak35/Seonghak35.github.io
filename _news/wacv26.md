@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-I am excited to share that a co-authored paper on **metadata-guided real-time object detection in aerial imagery (Meta-YOLO)** has been accepted to *WACV 2026*.
+A co-authored paper on **metadata-guided real-time object detection in aerial imagery (Meta-YOLO)** has been accepted to *WACV 2026*.
