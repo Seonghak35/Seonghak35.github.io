@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="Distilling Balanced Knowledge from a Biased Teacher">
+  <meta name="keywords" content="Model Compression, Knowledge Distillation, Long-Tailed Distribution, Class Imbalance, Biased Teacher, Cross-group Loss, Within-group Loss">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>LTKD: Long-Tailed Knowledge Distillation</title>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-QZ6W7M2HLM"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-QZ6W7M2HLM');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/kangaroo.png">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+		<h1 class="title is-2 publication-title">Distilling Balanced Knowledge from a Biased Teacher</h1>
+		<h2 class="title is-4 publication-title" style="font-weight: normal;">CVPR 2026</h2>
+
+          <div class="is-size-4 publication-authors">
+            <span class="author-block">
+              <a href="https://seonghak35.github.io/">Seonghak Kim</a></span>
+            </span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">Agency for Defense Development (ADD)</span>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <span class="link-block">
+                <a href="./static/papers/main.pdf"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="./static/papers/supple.pdf"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-folder-plus"></i>
+                  </span>
+                  <span>Appendix</span>
+                </a>
+              </span>
+
+	      <!-- Video Link. -->
+              <span class="link-block">
+                <a href=""
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-youtube"></i>
+                  </span>
+                  <span>Video</span>
+                </a>
+              </span>
+
+	      <!-- Poster Link. -->
+              <span class="link-block">
+                <a href=""
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-chalkboard-teacher"></i>
+                  </span>
+                  <span>Poster</span>
+                </a>
+              </span>
+
+	      <!-- Bibtex Link. -->
+              <span class="link-block">
+                <a href="#BibTeX"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-quote-right"></i>
+                  </span>
+                  <span>BibTex</span>
+                </a>
+              </span>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+	<h2 class="title is-3">Overview and Key Results</h2>
+        <div class="content has-text-justified">
+          <p>
+	    <b>Conventional knowledge distillation</b>, designed for model compression, <b>fails on long-tailed distributions</b> because the teacher model tends to be biased toward head classes and provides limited supervision for tail classes.
+	  </p>
+	  <div class="has-text-centered">
+            <img src="./static/images/figures/Figure1.png" 
+                 style="width: 85%">
+            <p style="font-size: 1.0rem; color: #555; margin-bottom: 2rem;">
+	      Overview of standard KD on long-tailed distributions.
+            </p>
+          </div>
+
+	  <hr>
+
+	  <p>
+	  We propose <b>Long-Tailed Knowledge Distillation (LTKD)</b>, a novel framework that <b>reformulates the conventional objective</b> into two components: <b>a cross-group loss</b>, capturing mismatches in prediction distributions across class groups (head, medium, and tail), and <b>a within-group loss</b>, capturing discrepancies within each group's distribution. This decomposition <b>reveals the specific sources of the teacher's bias</b>. To mitigate the inherited bias, LTKD introduces (1) <b>a rebalanced cross-group loss</b> that calibrates the teacher's group-level predictions and (2) <b>a reweighted within-group loss</b> that ensures equal contribution from all groups. 
+	  </p>
+	  <div class="has-text-centered">
+            <img src="./static/images/figures/Figure2.png" 
+                 style="width: 100%">
+	    <p style="font-size: 1.0rem; color: #555; margin-bottom: 2rem;">
+	      Overview of the proposed Long-Tailed Knowledge Distillation (LTKD).
+            </p>
+          </div>
+	
+	  <hr>
+
+	  <p>
+	  Extensive experiments on <b>CIFAR-100-LT, TinyImageNet-LT, and ImageNet-LT</b> demonstrate that <b>LTKD significantly outperforms existing methods</b> in both overall and tail-class accuracy, thereby showing its ability to distill balanced knowledge from a biased teacher for real-world applications.
+          </p>
+	  <div class="has-text-centered">
+	    <p style="font-size: 1.0rem; color: #555; margin-bottom: 0rem;">
+	    Accuracy (%) on tail and overall classes for CIFAR-100-LT.
+            </p>
+            <img src="./static/images/tables/Table1.png" 
+                 style="width: 100%; margin-bottom: 1rem;">
+          </div>
+	  <div class="has-text-centered">
+	    <p style="font-size: 1.0rem; color: #555; margin-bottom: 0rem;">
+	    Accuracy (%) on tail and overall classes for TinyImageNet-LT.
+            </p>
+            <img src="./static/images/tables/Table2.png" 
+                 style="width: 100%; margin-bottom: 1rem;">
+          </div>
+	  <div class="has-text-centered">
+	    <p style="font-size: 1.0rem; color: #555; margin-bottom: 0rem;">
+	    Accuracy (%) on tail and overall classes for ImageNet-LT.
+            </p>
+            <img src="./static/images/tables/Table3.png" 
+                 style="width: 100%">
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </div>
+</section>
+<br>
+
+
+<!-- BibTex. -->
+<hr>
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTex</h2>
+    <pre><code>
+    @InProceedings{kim2026distilling,
+      title={Distilling Balanced Knowledge from a Biased Teacher},
+      author={Kim, Seonghak},
+      booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern recognition},
+      year={2026}
+}</code></pre>
+  </div>
+</section>
+<br><br>
+
+<footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            This website is licensed under a <a rel="license"
+                                                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+          <p>
+            This website template is borrowed from <a href="https://nerfies.github.io/">Nerfies</a>. 
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
