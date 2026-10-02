@@ -1,11 +1,27 @@
 ---
 ---
+@article{KIM2026931,
+  abbr={ISPRS P&RS},
+  title = {Distilling adaptive scale knowledge for remote sensing object detection},
+  author={Kim, Seonghak and Yoon, Deukryeol and Sung, Young Hwa},
+  journal = {ISPRS Journal of Photogrammetry and Remote Sensing},
+  volume = {242},
+  pages = {931-946},
+  year = {2026},
+  month={Dec.},
+  publisher={Elsevier},
+  abstract = {Knowledge Distillation (KD) is a promising method for improving student model performance by transferring knowledge from high-capacity teacher models. However, in remote sensing object detection, where small objects are densely clustered, existing KD techniques suffer from notable limitations. By compressing scale-dependent characteristics into a single feature embedding, these methods often overlook scale-specific information, leading to scale entanglement dominated by large objects and, ultimately, degraded detection performance. We propose Distilling Adaptive Scale Knowledge (DASK), a framework designed to address these challenges by decoupling features into multi-scale representations for knowledge transfer and independent optimization. DASK consists of two key components: (1) Multi-Scale Feature (MSF), which separates features corresponding to small, medium, and large objects with multiple dilation rates; and (2) Scale-Specific Update (SSU), which mitigates inter-scale interference and regulates optimization dynamics. Specifically, SSU assigns a lower momentum to feature losses associated with small objects to induce a careful and precise optimization process, while applying a higher momentum to large object features to ensure stable and accelerated training. This design promotes more balanced optimization across scales. Extensive experiments on DOTA, VisDrone, and a custom dataset demonstrate that DASK consistently outperforms existing KD methods, highlighting its effectiveness for remote sensing applications.}
+  html={https://doi.org/10.1016/j.isprsjprs.2026.09.033},
+  selected={true},
+}
+
 @article{kim2025figkd,
   abbr={ESWA},
   title={FiGKD: Fine-Grained Knowledge Distillation via High-Frequency Detail Transfer},
   author={Kim, Seonghak},
   journal={Expert Systems With Applications},
   year={2026},
+  month={Jul.},
   publisher={Elsevier},
   abstract={Knowledge distillation (KD) is a widely adopted technique for transferring knowledge from a high-capacity teacher model to a smaller student model by aligning their output distributions. However, existing methods often underperform in fine-grained visual recognition tasks, where distinguishing subtle differences between visually similar classes is essential. This performance gap stems from the fact that conventional approaches treat the teacher's output logits as a single, undifferentiated signal-assuming all contained information is equally beneficial to the student. Consequently, student models may become overloaded with redundant signals and fail to capture the teacher's nuanced decision boundaries. To address this issue, we propose Fine-Grained Knowledge Distillation (FiGKD), a novel frequency-aware framework that decomposes a model's logits into low-frequency (content) and high-frequency (detail) components using the discrete wavelet transform (DWT). FiGKD selectively transfers only the high-frequency components, which encode the teacher's semantic decision patterns, while discarding redundant low-frequency content already conveyed through ground-truth supervision. Our approach is simple, architecture-agnostic, and requires no access to intermediate feature maps. Extensive experiments on CIFAR-100, TinyImageNet, and multiple fine-grained recognition benchmarks show that FiGKD consistently outperforms state-of-the-art logit-based and feature-based distillation methods across a variety of teacher-student configurations. These findings confirm that frequency-aware logit decomposition enables more efficient and effective knowledge transfer, particularly in resource-constrained settings.},
   html={https://doi.org/10.1016/j.eswa.2026.132071},

@@ -1,3 +1,7 @@
+"ISPRS P&RS":
+        url: https://www.sciencedirect.com/journal/isprs-journal-of-photogrammetry-and-remote-sensing
+        color: "#8a6734"
+
 "ESWA":
         url: https://www.sciencedirect.com/journal/expert-systems-with-applications
         color: "#055777"
